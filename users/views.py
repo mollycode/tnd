@@ -1,14 +1,20 @@
 # Create your views here.
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login as auth_login
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
+def login(request):
+    if request.POST:
+        return profile(request)
+    else:
+        return render(request, "login.html")
+
 def profile(request):
     if request.POST:
-        if request.POST['password1']:
+        if 'password1' in request.POST:
             password = request.POST['password1']
         else:
             password = request.POST['password']
@@ -17,8 +23,8 @@ def profile(request):
         user = authenticate(username=username, password=password)
         if user is not None:
             if user.is_active:
-                login(request, user)
-                return render(request, "profile.html")
+                auth_login(request, user)
+                return render(request, "profile.html", {"username": username})
             else:
                 print "not an active user"
                 return render(request, "login.html")
