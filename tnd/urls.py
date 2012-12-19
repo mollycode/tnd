@@ -6,6 +6,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
 
     url(r'^$', 'main.views.home'),
+    url(r'^personalpage/$', 'main.views.personalpage'),
+    url(r'^about/$', 'main.views.about'),
 
     url(r'^courses/$', 'main.views.courses'),
     url(r'^wiki/$', 'main.views.wiki'),

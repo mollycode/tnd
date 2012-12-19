@@ -1,76 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>3ND - 3 Nights and Done</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <!-- Le styles -->
-    <link href="{{ STATIC_URL }}bootstrap/css/bootstrap.css" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-    </style>
-    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style.css" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+		<script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+		<!-- Add fancyBox -->
+		<link rel="stylesheet" href="./fancybox/source/jquery.fancybox.css?v=2.0.6" type="text/css" media="screen" />
+		<script type="text/javascript" src="./fancybox/source/jquery.fancybox.pack.js?v=2.0.6"></script>
 
-    <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-  </head>
+		<script type="text/javascript" src="{{ STATIC_URL }}javascript.js"></script>
 
-  <body>
+		<title>3ND</title>
+	</head>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">3ND</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<div id="logo">
+					<img src="{{ STATIC_URL }}images/logo.png" />
+				</div>
 
-    <div class="container">
-		{% block content %}{% endblock %}
-    </div> <!-- /container -->
+				<div id="nav">
+					<div class="navactive">
+						<a href="/"><img src="{{ STATIC_URL }}images/courses_1.png" /></a>
+					</div>
+					<div class="navtitle">
+						<a href="/personalpage/"><img src="{{ STATIC_URL }}images/you.png" /></a>
+					</div>
+				</div>
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{{ STATIC_URL }}bootstrap/js/jquery.js"></script>
-    <!-- <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-transition.js"></script>
-    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-alert.js"></script>
-    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-modal.js"></script>
-    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-dropdown.js"></script>
-    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-scrollspy.js"></script>
-    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-tab.js"></script>
-    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-tooltip.js"></script>
-    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-popover.js"></script>
-    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-button.js"></script>
-    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-collapse.js"></script>
-    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-carousel.js"></script>
-    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-typeahead.js"></script> --!>
+				<div id="login">
+					<a href="/users/register/">Register</a>&nbsp; &#124; &nbsp; <a href="/users/login/">Login</a>
+				</div>
+			</div>
+			
+			{% block content %}
+			
+			<div id="content">
+				<div id="indexleft">
+					<a href="/about/"><img src="{{ STATIC_URL }}images/about3ndbutton.png" /></a>
+					<img src="{{ STATIC_URL }}images/flowchart.png" />
+					<br />
+					<a href="/users/register/"><img src="{{ STATIC_URL }}images/startnowbutton.png" /></a>
+				</div>
+				<div id="indexvideos">
+					<div class="block"><img src="{{ STATIC_URL }}images/blocks/howtheinternetworks.png" width="100%" height="100%"/>
+					</div>
+					<div class="block1"><img src="{{ STATIC_URL }}images/blocks/inventiontoventure.png" width="100%" height="100%"/>
+					</div>
+					<div class="block1"><img src="{{ STATIC_URL }}images/blocks/whatisdsl.png" width="100%" height="100%"/>
+					</div>
+					<div class="block1"><img src="{{ STATIC_URL }}images/blocks/americasquestforuniversalbroadbandservices.png" width="100%" height="100%"/>
+					</div>
+					<div class="block"></div>
+					<div class="block"></div>
 
-  </body>
+				</div>
+
+				<div id="indexpagescroll">
+					scroll
+				</div>
+			</div>
+			
+			{% endblock %}
+			
+		</div>
+		{% block footer %}
+		<div id="footer">
+			<div class="footertext"><img src="{{ STATIC_URL }}images/footerlogo.png" />
+			</div>
+			<div class="footertext">
+				<a href="#">Terms of Use </a>
+			</div>
+			<div class="footertext">
+				<a href="#">Contact</a>
+			</div>
+			<div class="footertext">
+				<a href="/about/">About</a>
+			</div>
+		</div>
+		{% endblock %}
+	</body>
 </html>

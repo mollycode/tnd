@@ -1,0 +1,525 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html {
+	overflow-y: scroll;
+	overflow: -moz-scrollbars-vertical;
+	height: 100%;
+}
+
+a img {
+	text-decoration: none;
+	border: none;
+}
+
+body {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: Arial, sans-serif;
+	background-color: #f1f0eb;
+	background-image: url(images/background.png);
+	background-repeat: repeat-x;
+}
+
+#wrapper {
+	text-align:left;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: -50px;
+	min-height: 100%;
+	height: auto;
+	padding: 0;
+	width: 935px;
+	overflow: hidden;
+	background-color: #f1f0eb;
+}
+
+/*header and navigation bar*/
+#header {
+	height: 39px;
+	width: 100%;
+	padding-top: 2px;
+	text-align: center;
+	background-image: url(images/background.png);
+	background-repeat: repeat-x;
+}
+
+#logo {
+	position: relative;
+	float: left;
+	height: 30px;
+	display: inline-block;
+	padding-top: 5px;
+}
+
+
+#nav {
+	position: relative;
+	height: 30px;
+	padding-top: 2px;
+	display: inline-block;
+	padding: 0;
+}
+
+.navtitle {
+	padding: 0px 30x 0px 30px;
+	display: inline-block;
+}
+
+.navactive {
+	padding: 0px 30x 0px 30px;
+	display: inline-block;
+}
+
+
+#login { 
+	position: relative;
+	float: right;
+	height: 22px;
+	padding-top: 13px;
+	font-size: 14px;
+	display: inline-block;
+}
+
+#login a {
+	text-decoration: none;
+	color: #000;
+}
+
+/* center */
+#content {
+	top: 25px;
+	width: 100%;
+	height: 800px;
+	padding-top: 60px;
+	overflow: hidden;
+}
+
+/* footer navigation and copyright */
+#footer {
+	width: 100%;
+	text-align: center;
+	height: 40px;
+	padding-top: 10px;
+	margin-top: 50px;
+	clear: both;
+	background-color: #FFF;
+	border-top: 1px solid #d5d5d5;
+	vertical-align: bottom;
+}
+
+.footertext {
+	color: #7f7f7f;
+	height: 35px;
+	display: inline-block;
+	text-align: center;
+	font-size: 14px;
+	text-decoration: none;
+	padding: 5px 20px 0px 20px;
+}
+
+.footertext a {
+	color: #7f7f7f;
+	text-decoration: none;
+}
+
+.footertext a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+.footertext a:visited {
+	text-decoration: none;
+}
+
+.footertext img {
+	vertical-align: middle;
+	padding-top: -4px;
+}
+
+/*main page*/
+#indexleft {
+	background-image:url(images/leftbg.png);
+	background-repeat: repeat-x;
+	position: relative;
+	width: 23.5%;
+	height: 684px;
+	font-size: 13px;
+	border-bottom: 1px solid #c5c5c2;
+	border-right: 1px solid #c5c5c2;
+}
+
+#indexvideos {
+	position: relative;
+	left: 220px;
+	top: -685px;
+	padding-left: 5px;
+	width: 76.5%;
+	height: 684px;
+	
+}
+
+#indexvideos .block {
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 330px;
+	height: 220px;
+	margin: 2px;
+}
+#indexvideos .block1 {
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 330px;
+	height: 220px;
+	margin: 2px;
+}
+
+#indexpagescroll {
+	position: relative;
+	width: 110px;
+	height: 15px;
+	padding-top: 750px;
+	padding-left: 700px;
+}
+
+/*personal page*/
+#youleft {
+	position: relative;
+	width: 23.5%;
+	height: 684px;
+	font-size: 13px;
+	border-right: 1px solid #c5c5c2;
+}
+
+#youleft h2{
+	border-bottom: 1px solid #c5c5c2;
+	color: #f2540e;
+	margin: 0;
+	padding: 10px 5px 10px 10px;
+	font-size: 18px;
+}
+
+#youleft .link a {
+	font-size: 16px;
+	color: #000;
+	padding: 15px 0px 0px 10px;
+	display: block;
+	width-max: 100%;
+	height: 30px;
+	text-decoration: none;
+}
+
+#youleft .linkactive a {
+	font-size: 16px;
+	color: #000;
+	padding: 15px 0px 0px 10px;
+	display: block;
+	width-max: 100%;
+	height: 30px;
+	text-decoration: none;
+	background-color: #cccccc;
+}
+
+#youvideos {
+	position: relative;
+	left: 220px;
+	top: -684px;
+	padding-left: 5px;
+	width: 55.5%;
+	height: 684px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+
+#youvideos .video {
+	position: relative;
+	display: block;
+	height: 250px;
+	width: 32%;
+	margin: 0px 3px 0px 3px;
+	float: left;
+}
+
+#youvideos .title {
+	margin: 5px 5px 0px 5px;
+	padding: 0;
+	size: 12px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+}
+
+#youvideos .date {
+	margin: 5px 5px 0px 5px;
+	padding: 0;
+	size: 12px;
+	color: #777;
+	text-decoration: none;
+}
+
+#youvideos .videoprogress {
+	margin: 5px 5px 0px 5px;
+	padding: 0;
+	size: 14px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+}
+
+#youvideos .quizprogress {
+	margin: 5px 5px 0px 5px;
+	padding: 0;
+	size: 14px;
+	color: #777;
+	text-decoration: none;
+}
+
+#youmemo {
+	position: relative;
+	top: -1368px;
+	left: 745px;
+	width: 20%;
+	background-color: #FFF;
+	height: 684px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	border: 1px solid #e2e2e0;
+}
+
+/*course landing pages*/
+#coursecontent {
+	position: relative;
+	width: 100%;
+	height: 1500px;
+}
+
+#coursemain{
+	position: relative;
+	width: 80%;
+}
+
+.search {
+	height: 55px;
+}
+
+#coursenighttitle{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	background-color: #FFF;
+	border-bottom: 1px solid #BBB;
+}
+
+#coursenighttitle .menuactive {
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	background-color: #f97205;
+	display: inline-block;
+	padding: 10px 35px 8px 35px;
+	margin: 0px 7px 0px 7px;
+	color: #FFF;
+	size: 24px;
+}
+
+#coursenighttitle .menu {
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	background-color: #e3e1e1;
+	display: inline-block;
+	padding: 10px 35px 8px 35px;
+	margin: 0px 7px 0px 7px;
+	color: #9b9b9b;
+	size: 24px;
+}
+
+#coursenighttitle a, a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+#coursevideo {
+	position: relative;
+	width: 720px;
+	height: 480px;
+	top: 10px;
+	background-color: #000;
+}
+#coursedescription{
+	position: relative;
+	top: 30px;
+	width: 720px;
+	height: 225px;
+	background-color: #FFF;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	overflow: hidden;
+	border: 1px solid #e2e2e0;
+}
+
+#coursedescription .title {
+	border-bottom: 1px dotted #BBB;
+	padding: 15px 0px 10px 0px;
+	margin: 0;
+}
+
+#coursedescription h3 {
+	margin: 0;
+	padding: 0px 0px 0px 10px;
+	font-size: 16px;
+	color: #000;
+}
+
+#coursedescription p {
+	padding: 15px 10px 5px 10px;
+	margin: 0;
+	font-size: 14px;
+	color: #888;
+}
+
+#coursedescription a {
+	text-decoration: none;
+	font-size: 14px;
+	color: #fa8d39;
+}
+
+#coursedescription a:hover {
+	text-decoration: none;
+	font-size: 14px;
+	color: #f97107;
+}
+
+#coursedescription .topic {
+	position: relative;
+	width: 350px;
+	height: 100%;
+}
+
+#coursedescription .author {
+	position: relative;
+	left: 368px;
+	top: -225px;
+	width: 350px;
+	height: 100%;
+}
+
+#coursedescription .info {
+	height: 155px;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+#coursedescription .more {
+	position: relative;
+	padding: 0;
+	margin: 0;
+	top: -5px;
+}
+
+#coursediscussion {
+	position: relative;
+	top: 50px;
+	width: 720px;
+	height: 500px;
+	background-color: #FFF;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	border: 1px solid #e2e2e0;
+}
+
+#coursediscussion .title {
+	border-bottom: 1px dotted #BBB;
+	padding: 15px 0px 10px 0px;
+	margin: 0;
+}
+
+#coursediscussion h3 {
+	margin: 0;
+	padding: 0px 0px 0px 10px;
+	font-size: 16px;
+	color: #000;
+}
+
+#coursediscussion p {
+	padding: 15px 10px 5px 10px;
+	margin: 0;
+	font-size: 14px;
+	color: #888;
+}
+
+#coursediscussion a {
+	text-decoration: none;
+	font-size: 14px;
+	color: #fa8d39;
+}
+
+#coursediscussion a:hover {
+	text-decoration: none;
+	font-size: 14px;
+	color: #f97107;
+}
+
+#courseright {
+	position: relative;
+	left: 730px;
+	top: -1200px;
+	width: 200px;
+	height: 700px;
+	background-color: #FFF;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	border: 1px solid #e2e2e0;
+}
+
+/*about page*/
+#aboutcontent {
+	position: relative;
+	width: 100%;
+	height: 1100px;
+}
+
+#abouttitle{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid #BBB;
+}
+
+#abouttitle .menuactive {
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	background-color: #cccccc;
+	display: inline-block;
+	padding: 10px 35px 8px 35px;
+	margin: 0px 7px 0px 7px;
+	color: #000;
+	size: 24px;
+}
+
+#abouttitle .menu {
+	display: inline-block;
+	padding: 10px 35px 8px 35px;
+	margin: 0px 7px 0px 7px;
+	color: #9b9b9b;
+	size: 24px;
+}
+
+#abouttitle a, a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+
+#aboutmain{
+	position: relative;
+	width: 75%;
+	left: 125px;
+}
+
