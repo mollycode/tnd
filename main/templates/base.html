@@ -25,7 +25,11 @@
                 </div>
 
 				<div id="login">
+					{% if user.is_authenticated %}
+					{{ user.username }} &nbsp; &#124; &nbsp; <a href="/users/logout/">Logout</a>
+					{% else %}
 					<a href="/users/register/">Register</a>&nbsp; &#124; &nbsp; <a href="/users/login/">Login</a>
+					{% endif %}
 				</div>
 			</div>
 			

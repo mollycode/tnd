@@ -117,7 +117,7 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.sites',
+    # 'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
@@ -125,6 +125,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     
     'main',
+    'users',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -155,3 +156,7 @@ LOGGING = {
         },
     }
 }
+
+AUTH_PROFILE_MODULE = 'users.UserProfile'
+
+LOGIN_URL = '/users/login/'
