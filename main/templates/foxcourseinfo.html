@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <div id="courseinfocontent">
+        	<div id="coursenighttitle"><!--this section/format is same for all the other course landing pages; not sure if there's a way to just have static content for the course description, instructor, schedule, etc. or not?-->
+            	<div class="search"></div><br />
+                <a href="#"><div class="menuactive1">Course Info</div></a> <!--link to this current page -->
+            	<a href="#"><div class="menu">Night 1</div></a> <!--link to night 1; if course hasn't been added yet, have a pop-up box that prompts if they want to add course to their personal page-->
+                <a href="#"><div class="menu">Night 2</div></a> <!--link to night 2; same logic as above-->
+                <a href="#"><div class="menu">Night 3</div></a> <!--link to night 3; same logic as above-->
+                <a href="#"><div class="menu">Discussion</div></a> <!--link to discussion for this course only; same logic as above-->
+            </div>
+            <div id="courseinfomain">
+                
+                <div id="courseinfodescription">
+                	<h1>Richard M. Fox: Invention to Venture</h1>
+                    <div class="left">
+                    	<p>Taught by a venture capitalist, this seminar will provide a practical approach to the fundamentals of venture capital investing and the structure of the venture capital industry.  Specific topics include investment selection, due diligence, valuation, negotiation, portfolio company management, exits, limited partners, and firm management. Case studies will be used to assist students understanding for the practical aspects of the business as well as the current state of the venture capital industry.</p>
+                    </div>
+                    <div class="right">
+                    	<img src="{{ STATIC_URL }}images/blocks/fox.png" width="360px" height="240px"/>
+                    </div>
+                </div>
+                <div class="course">
+                	<h1>Course Schedule</h1>
+                    <h2><a href="#">Night 1</a> </h2>
+                    <p></p>
+                    <h2><a href="#">Night 2</a> </h2>
+                    <p></p>
+                    <h2><a href="#">Night 3</a> </h2>
+                    <p></p><br /><br />
+                </div>
+                
+                <div class="author">
+                <h1>About the Instructor(s)</h1>
+                <p></p>
+                <img src="{{ STATIC_URL }}images/author/fox.jpg" height="210px" />
+                <p><span style="font-size: 24px">Richard M. Fox</span> is a managing director of Cross Atlantic Capital Partners and has been with the firm since 1999. A venture capitalist with extensive investment experience in Software, Mobile/Wireless and Internet Technologies, he has in depth expertise with a wide array of companies including Netsuite, Infoblox, ICG Commerce, R2 Technology, Navini Networks, and Interactions. Richard has worked closely with entrepreneurs in multiple portfolio companies in a wide variety of different industries and has served as a director on the board of numerous companies. </p>
+
+				<p>Richard has close to 30 years of investment experience in venture capital, institutional investing, and commercial banking. Prior to joining Cross Atlantic, he was president of Penn Janney Advisory, which managed both the direct private equity and partnership investments for The Penn Mutual Life Insurance Company and its wholly owned subsidiary, Janney Montgomery Scott. Before joining Penn Mutual, he was a vice president in the corporate lending division of PNC Bank and managed a portfolio of large corporate relationships. Richard began his career with Chemical Bank's (now J. P. Morgan's) Latin American Division, where he held a number of management positions. Richard also serves as an adjunct associate professor at New York University where, for the last 30 years, he has taught Intensive Credit Training seminars to both domestic and foreign bankers. </p>
+
+				<p>Richard received a B.A. from the University of Connecticut (1977) and an M.A. from Georgetown University (1980).</p>
+                </div>
+               
+            </div>
+            
+            
+        </div>
+{% endblock %}

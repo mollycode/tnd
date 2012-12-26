@@ -1,24 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
-        <div id="content">
-        	<div id="indexleft">
-            	<a href="/about/"><img src="{{ STATIC_URL }}images/about3ndbutton.png" /></a>
-            	<img src="{{ STATIC_URL }}images/flowchart.png" /> <br />
-                <a href="/users/register/"><img src="{{ STATIC_URL }}images/startnowbutton.png" /></a>
-            </div>
-            <div id="indexvideos">
-            	<div class="block"><img src="{{ STATIC_URL }}images/blocks/howtheinternetworks.png" width="100%" height="100%"/></div>
-                <div class="block1"><img src="{{ STATIC_URL }}images/blocks/inventiontoventure.png" width="100%" height="100%"/></div>
-                <div class="block1"><img src="{{ STATIC_URL }}images/blocks/whatisdsl.png" width="100%" height="100%"/></div>
-                <div class="block1"><img src="{{ STATIC_URL }}images/blocks/americasquestforuniversalbroadbandservices.png" width="100%" height="100%"/></div>
-                <div class="block"></div>
-                <div class="block"></div>
+        <div id="indexcontent">
+        	<div class="search"></div><br />
+            <h1>What is 3ND?</h1>
+        	<h2>About 3 Nights and Done</h2>
+                <h3>3ND stands for "3 Nights and Done."</h3>
+    
+                <p>It's free. It's non-profit. It won't sell your student activity records. It makes learning fun for people of all ages.</p>
                 
-            </div>
+                <p>You watch 1 hour of educational material each night, and in 3 nights' time it's done. Simple as that. You will get a sense of accomplishment instantly over, say, a weekend.</p>
+                
+                <p>What can you learn in 3 nights? A lot! All our 3ND units are practical questions that you want to know the answers for, ranging from how the Internet works to how hair grows on heads, from how to finance a startup to how to watch baseball games like a pro.</p><br />
+            <p style="text-align: right;"><a href="/about/" class="button orange">Learn More About 3ND</a></p>
+            <img src="{{ STATIC_URL }}images/flowchart.png" />
+            <br />
+            <p style="text-align: right;"><a href="/users/register/" class="button blue">Start Now!</a></p><br /><br />
+            <div id="indexbottom">
+            	<h1>Hot Courses</h1>
+                <div class="left"><a href="/cambroncourseinfo/"><img src="{{ STATIC_URL }}images/blocks/cambron.png" width="360px" height="240px" /></a></div>
+                <div class="right">
+                	<p>In the space of 30 years the Internet went from a novelty used by engineers to become a part of our lives as essential as transportation. A third of the world's people use it and it has spread to virtually every country on earth. This three hour course explores the networks and technologies that work in concert to provide the wide range of services offered on the Internet. The course is organized into four fifteen minute videos per hour. Each video is accompanied by a self-exam of ten multiple choice questions. There are no prerequisites, but students should have experience using the Internet and an interest in learning more about the technologies that enable it. Students who pass the course will gain a better understanding of how the networks are interconnected, how the Internet is organized and how it operates.</p>
+                    <br />
+                    <span class="grey">January 3, 2012</span>
+                </div>
+                
+                <br /><br />
+                <p style="text-align: center;"><a href="/courses/" class="coursebutton grey">View Course List</a></p>
+                <br /><br />
+                <p style="text-align: right;"><a href="/suggestions/" class="buttongrey">Suggestions</a></p>
             
-            <div id="indexpagescroll">
-            scroll
             </div>
         </div>
 {% endblock %}
