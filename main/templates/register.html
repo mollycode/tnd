@@ -2,14 +2,15 @@
 
 {% block content %}
 <form action="" method="post">
-<table>
-	{% csrf_token %}
-{{ form.as_table }}
-<tr>
-	<td>
-		<input type="submit" value="Submit" name="Submit">
-	</td>
-</tr>
-</table>
+	<table>
+		{% csrf_token %}
+		{{ creation_form.as_table }}
+		{{ profile_form.as_table }}
+		<tr>
+			<td>
+				<input type="submit" value="Submit" name="Submit">
+			</td>
+		</tr>
+	</table>
 </form>
 {% endblock %}
