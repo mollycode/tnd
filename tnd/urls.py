@@ -9,11 +9,12 @@ urlpatterns = patterns('',
     url(r'^personalpage/$', 'main.views.personalpage'),
     url(r'^about/$', 'main.views.about'),
 
-    url(r'^courses/$', 'main.views.courses'),
+    url(r'^courselist/$', 'main.views.courselist'),
     url(r'^wiki/$', 'main.views.wiki'),
     
     url(r'^users/', include('users.urls')),
-    # url(r'^tnd/', include('tnd.foo.urls')),
+    
+    url(r'^course/', include('courses.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
