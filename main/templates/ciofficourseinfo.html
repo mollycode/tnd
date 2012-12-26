@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <div id="courseinfocontent">
+        	<div id="coursenighttitle"> <!--this section/format is same for all the other course landing pages; not sure if there's a way to just have static content for the course description, instructor, schedule, etc. or not?-->
+            	<div class="search"></div><br />
+                <a href="#"><div class="menuactive1">Course Info</div></a> <!--link to this current page -->
+            	<a href="#"><div class="menu">Night 1</div></a> <!--link to night 1; if course hasn't been added yet, have a pop-up box that prompts if they want to add course to their personal page-->
+                <a href="#"><div class="menu">Night 2</div></a> <!--link to night 2; same logic as above-->
+                <a href="#"><div class="menu">Night 3</div></a> <!--link to night 3; same logic as above-->
+                <a href="#"><div class="menu">Discussion</div></a> <!--link to discussion for this course only; same logic as above-->
+            </div>
+            <div id="courseinfomain">
+                
+                <div id="courseinfodescription">
+                	<h1>John Cioffi: What is DSL?</h1>
+                    <div class="left">
+                    	<p>Digital Subscriber Lines (DSL) is today the dominant global form of broadband access and the underlying enabling technology of the internet as we know it today, although many may not be aware of this quiet but solid internet base.  This 3-night stand will review DSL at its inception to its present dominant position on nearly ½ billion phone lines and billions of off-loading wireless data of smarthphones and tablets that use DSL daily.</p>
+						<p>In so doing, the short course explain the key basic technologies as DSL progressed from replacing voiceband modems with 10x their bandwidth in the mid 1990's, allowing the worldwide web to flourish (from its disappointing "World Wide Wait" status) into the medium we all use regularly today enabling many powerful new applications from web surfing to video/voice conferencing worldwide to IPTV and other forms of video to an essential component of todays mobile data successes. </p>
+                        <p>This continuing success required a number of fundamental technological innovations so that the existing wired and wireless infrastructure could economically keep pace with consumer's insatiable need for more and more digital data.  Speeds of initially 1 Mbps to 10's of Mbps and now to 100's of Mbps make it the fastest broadband medium per user (noting cable, fiber, and pure wireless share many customers so their per-user bandwidths are often misquoted).  As wireless data needs increase, perhaps driven increasingly by machines and things along with people, more recent technological innovations will also be cited that will continue DSL's growth over the next decades.</p>
+                    </div>
+                    <div class="right">
+                    	<img src="{{ STATIC_URL }}images/blocks/cioffi.png" width="360px" height="240px"/>
+                    </div>
+                </div>
+                <div class="course">
+                	<h1>Course Schedule</h1>
+                    <h2><a href="#">Night 1</a> </h2>
+                    <p></p>
+                    <h2><a href="#">Night 2</a> </h2>
+                    <p></p>
+                    <h2><a href="#">Night 3</a> </h2>
+                    <p></p><br /><br />
+                </div>
+                
+                <div class="author">
+                <h1>About the Instructor(s)</h1>
+                <p></p>
+                <img src="{{ STATIC_URL }}images/author/cioffi.jpg" height="210px" />
+                <p><span style="font-size: 24px">John M. Cioffi</span> is Chairman and CEO of ASSIA Inc, a Redwood City, CA based company pioneering DSL management software sold to DSL service providers, specifically known for introducing Dynamic Spectrum Management or DSM.  He is also the Hitachi Professor Emeritus at Stanford University, where he held a tenured endowed professorship before retiring after 22 full-time years.  Cioffi received his BSEE, 1978,  Illinois; PhDEE,  1984, Stanford; Honorary Doctorate, University of Edinburgh 2010;  Bell Laboratories, 1978-1984; IBM Research, 1984-1986; EE Prof., Stanford, 1986-2008.   Cioffi also founded Amati Com. Corp in 1991 (purchased by TI in 1997 for its DSL technology) and was officer/director from 1991-1997.  Cioffi designed the world's first ADSL and VDSL modems, which design today accounts for roughly 98% of the worlds over 400 million DSL connections.</p>  
+
+				<p>Cioffi currently also services the Board of Directors of Alto Beam and the Marconi Foundation and has previously served the boards of 8 other public and private companies.  Various other awards include IEEE Alexander Graham Bell, Kobayashi, and Millenium Medals/Awards (2010, 2001, 2000), Economist Magazine's 2010 Innovation Award, International Marconi Fellow (2006); Member, United States National and UK Royal Academies of Engineering (2001, 2009); IEEE Fellow (1996); IEE JJ Tomson Medal (2000); 1999 U. of Illinois Outstanding Alumnus and 2010 Distinguished Alumnus.  Cioffi has published several hundred technical papers and is the inventor named on over 100 additional patents, many of which are heavily licensed in the communication industry.
+ 				</p>
+                </div>
+               
+            </div>
+            
+            
+        </div>
+{% endblock %}

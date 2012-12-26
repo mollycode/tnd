@@ -16,17 +16,13 @@
 		<div id="wrapper">
 			<div id="header">
 				<div id="logo">
-					<img src="{{ STATIC_URL }}images/logo.png" />
+					<a href="/"><img src="{{ STATIC_URL }}images/logo.png" /></a>
 				</div>
 
 				<div id="nav">
-					<div class="navactive">
-						<a href="/"><img src="{{ STATIC_URL }}images/courses_1.png" /></a>
-					</div>
-					<div class="navtitle">
-						<a href="/personalpage/"><img src="{{ STATIC_URL }}images/you.png" /></a>
-					</div>
-				</div>
+                    <div class="navtitle"><a href="/courses/">Courses</a></div>		<!--change the class to "navactive" for the course list page-->
+                    <div class="navtitle"><a href="/personalpage/">MyPage</a></div>		<!--change the class to "navactive" for the personal page-->
+                </div>
 
 				<div id="login">
 					<a href="/users/register/">Register</a>&nbsp; &#124; &nbsp; <a href="/users/login/">Login</a>
@@ -66,18 +62,14 @@
 		</div>
 		{% block footer %}
 		<div id="footer">
-			<div class="footertext"><img src="{{ STATIC_URL }}images/footerlogo.png" />
-			</div>
-			<div class="footertext">
-				<a href="#">Terms of Use </a>
-			</div>
-			<div class="footertext">
-				<a href="#">Contact</a>
-			</div>
-			<div class="footertext">
-				<a href="/about/">About</a>
-			</div>
-		</div>
+        <div class="footertext"><img src="{{ STATIC_URL }}images/footerlogo.png" /></div>
+        <div class="footertext">
+        	<a href="#">Terms of Use </a><br />
+        	<a href="#">Contact</a><br />
+        	<a href="/about/">About</a><br />
+        </div>
+        <div class="footertext"></div>
+    </div>
 		{% endblock %}
 	</body>
 </html>

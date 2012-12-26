@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
 	$(".navtitle").mouseover(function() {
 		var img = $(this).find('img');
 		var file = img.attr('src').split('.')[0];
@@ -12,7 +12,7 @@ $(document).ready(function() {
 	
 	
 
-	/*$(".more").one( "click", function () {
+	$(".more").one( "click", function () {
 
 		$("#coursedescription").css( "height","+=200" );
 		$("#coursecontent").css("height", "+=200");
@@ -21,9 +21,10 @@ $(document).ready(function() {
 
 	});
 
-*/
+
 
 
 
 });
 
+*/
