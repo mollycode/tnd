@@ -1,11 +1,13 @@
 from django.forms import ModelForm, Textarea
+from django.forms.widgets import TextInput
 
 from models import UserProfile
 
 class UserProfileForm(ModelForm):
     class Meta:
         model = UserProfile
-        fields = ("first_name", "last_name", "age", "sex", "country", "background_field", "desire")
+        fields = ("first_name", "last_name", "age", "sex", "country", "education_level", "background_field", "desire")
         widgets = {
-            'desire': Textarea(attrs={'cols': 80, 'rows': 20}),
+            "age": TextInput(attrs={'size':'1','maxlength':'3'}),
+            "desire": Textarea(attrs={'cols': 80, 'rows': 20}),
         }

@@ -40,7 +40,7 @@ def profile(request):
     form = UserProfileForm()
     
     if request.POST:
-        form = UserProfileForm(request.POST)
+        form = UserProfileForm(request.POST, instance = request.user.get_profile())
         if form.is_valid():
             user_profile = form.save(commit = False)
             user_profile.user = request.user
