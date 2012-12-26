@@ -17,11 +17,17 @@ class UserProfile(models.Model):
 
 from django.db.models.signals import post_save
 
-# definition of UserProfile from above
-# ...
-
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
         UserProfile.objects.create(user=instance)
 
-post_save.connect(create_user_profile, sender=User)
+# post_save.connect(create_user_profile, sender=User)
+
+def get_or_create_user_profile(request):
+    profile = None
+    user = request.user
+    try:
+        profile = user.get_profile()
+    except UserProfile.DoesNotExist:
+        profile = UserProfile.objects.create(user = user)
+    return profile
