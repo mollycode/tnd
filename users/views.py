@@ -4,10 +4,9 @@ from django.shortcuts import render, redirect
 
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 
-from forms import UserProfileForm
+from forms import UserProfileForm, UserCreationForm
 from models import get_or_create_user_profile
 
 import sys
@@ -40,7 +39,10 @@ def profile(request):
     form = UserProfileForm()
     
     if request.POST:
-        form = UserProfileForm(request.POST, instance = request.user.get_profile())
+        try:
+            form = UserProfileForm(request.POST, instance = request.user.get_profile())
+        except:
+            form = UserProfileForm(request.POST)
         if form.is_valid():
             user_profile = form.save(commit = False)
             user_profile.user = request.user
