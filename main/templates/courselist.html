@@ -1,5 +1,113 @@
 {% extends "base.html" %}
-
+<!--For this page, I need you to have this for the nav, where div class="navactive" for courselist:
+<div id="nav">
+                    <div class="navactive"><a href="/courselist/">Courses</a></div>
+                    <div class="navtitle"><a href="/personalpage/">My Page</a></div>
+                </div>
+-->                
+                
 {% block content %}
-Course listing here!
+<div id="courselistcontent">
+	<div class="current">
+    </div>
+    
+    <div class="comingsoon">
+    	<h1>Courses Coming Soon!</h1>
+    	<table id="courseTable" class="tablesorter">
+        <thead>
+        	<tr>
+            	<th>Course Title</th>
+                <th>Instructor</th>
+                <th>Start Date</th>
+            </tr>
+        </thead>
+        <tbody>
+        	<tr>
+            	<td><a href="/course/cambroncourseinfo/">How The Internet Works</a></td>
+                <td>G. Keith Cambron(former CEO, AT&T Labs)</td>
+                <td>January 4, 2012</td>
+                <td><a class="addbutton blue" href="#">Add Course</a></td>
+            </tr>
+            <tr>
+            	<td><a href="/course/ciofficourseinfo/">What is DSL?</a></td>
+                <td>John Cioffi(Founder/Chairman/CEO, ASSIA)</td>
+                <td>January 4, 2012</td>
+                <td><a class="addbutton blue" href="#">Add Course</a></td>
+            </tr>
+            <tr>
+            	<td><a href="/course/foxcourseinfo/">Invention to Venture</a></td>
+                <td>Richard M. Fox(MD, Cross Atlantic Capital Partners)</td>
+                <td>January 4, 2012</td>
+                <td><a class="addbutton blue" href="#">Add Course</a></td>
+            </tr>
+            <tr>
+            	<td><a href="/course/glasscourseinfo">America's Quest for Universal Broadband Services</a></td>
+                <td>Victor Glass(Director, National Ex. Carrier Asso.)</td>
+                <td>January 4, 2012</td>
+                <td><a class="addbutton blue" href="#">Add Course</a></td>
+            </tr>
+            <tr>
+            	<td>How is Video Streamed Over the Internet?</td>
+                <td>Michael Cook(VP, Comcast)</td>
+                <td>Spring 2012</td>
+                <td><a class="addbutton blue" href="#">Add Course</a></td>
+            </tr>
+            <tr>
+            	<td>How To Innovate Networks</td>
+                <td>Adam Drobot(Former President, Telcordia Technologies)</td>
+                <td>Spring 2012</td>
+                <td><a class="addbutton blue" href="#">Add Course</a></td>
+            </tr>
+            <tr>
+            	<td>Why Numbers Rule Your World</td>
+                <td>Kaiser Fung (VP, Vimeo)</td>
+                <td>Spring 2012</td>
+                <td><a class="addbutton blue" href="#">Add Course</a></td>
+            </tr>
+            <tr>
+            	<td>How Can Cars Talk to Each Other?</td>
+                <td>Russell Hsing (Visiting Chair Prof. POSTECH)</td>
+                <td>Spring 2012</td>
+                <td><a class="addbutton blue" href="#">Add Course</a></td>
+            </tr>
+            <tr>
+            	<td>How Does Hair Grow On Our Heads?</td>
+                <td>Bill Ju(CEO, Follicals)</td>
+                <td>Spring 2012</td>
+                <td><a class="addbutton blue" href="#">Add Course</a></td>
+            </tr>
+            <tr>
+            	<td>How To Climb Over the Great Firewall</td>
+                <td>Prateek Mittal (Postdoc, UC Berkeley)</td>
+                <td>Spring 2012</td>
+                <td><a class="addbutton blue" href="#">Add Course</a></td>
+            </tr>
+            <tr>
+            	<td>How Do Sattelites Work?</td>
+                <td>Alan Young (former CTO, SES North America)</td>
+                <td>Spring 2012</td>
+                <td><a class="addbutton blue" href="#">Add Course</a></td>
+            </tr>
+            <tr>
+            	<td>How To Watch Baseball Like a Pro</td>
+                <td>Barry Foote (former baseball star)</td>
+                <td>Spring 2012</td>
+                <td><a class="addbutton blue" href="#">Add Course</a></td>
+            </tr>
+            <tr>
+            	<td>What Will 5G Look Like?</td>
+                <td>Wim Sweldons (President, Alcatel Lucent Wireless)</td>
+                <td>Spring 2012</td>
+                <td><a class="addbutton blue" href="#">Add Course</a></td>
+            </tr>
+            <tr>
+            	<td>How Does WiFi Work?</td>
+                <td>Raj Savoor(Executive Director, AT&T Labs)</td>
+                <td>Spring 2012</td>
+                <td><a class="addbutton blue" href="#">Add Course</a></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div>
 {% endblock %}
