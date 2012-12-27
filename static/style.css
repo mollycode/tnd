@@ -32,8 +32,6 @@
 	font-style: normal;
 }
 
-
-
 html {
 	overflow-y: scroll;
 	overflow: -moz-scrollbars-vertical;
@@ -659,7 +657,7 @@ body {
 #courseinfodescription .left {
 	position: relative;
 	display: inline-block;
-	width: 480px;
+	width: 540px;
 	padding: 0px;
 }
 
