@@ -1,3 +1,9 @@
+$(document).ready(function() 
+    { 
+        $("#courseTable").tablesorter( {sortList: [[2,0], [0,0]]} ); 
+    } 
+); 
+
 /*$(document).ready(function() {
 	$(".navtitle").mouseover(function() {
 		var img = $(this).find('img');
