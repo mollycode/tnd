@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>Register</p>
+<p>Registration</p>
 <p>New to 3ND? Register Below!</p>
 
-<div style="border: 1px solid #c4c4c4; padding: 30px; margin-bottom: 50px; font-family: 'OpenSansLight'; font-weight: normal;">
+<div id="register">
     <form action="" method="post">
         {% csrf_token %}
         <table>
@@ -13,7 +13,7 @@
             <tr>
                 <td></td>
                 <td>
-                    <input type="submit" value="Submit" name="submit">
+                    <input type="submit" value="Submit" name="submit" class="button grey">
                 </td>
             </tr>
         </table>
