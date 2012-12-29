@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+Welcome, {{ user.username }}!
+
+            <div id="personalcurrent">
+                <div id="profiletitle">
+                		<div class="search"></div><br />
+                        <a href="/profile/"><div class="menu">My Profile</div></a>
+                        <a href="/currentlessons/"><div class="menuactive">Lessons in Progress</div></a>
+                        <a href="/completedcourses/"><div class="menu">Completed Courses</div></a>
+                </div>
+                    
+            	<h2>Currently Watching</h2>
+                
+                <!--code for each block-->
+                <div class="courseblock">
+                	<div class="image">
+                    	<img src="courseimage" height="100%"/>
+                    </div>
+                    <div class="text">
+                    	<p class="title">{{ course.title }}</p>
+                        <p>{{ course.instructor }}</p>
+                        <div class="statusbar"></div>
+                        	<div class="container">
+                            	<div class="tic">|</div>
+                                <div class="tic">|</div>
+                                <div class="tic">|</div>
+                                <div class="tic">|</div>
+                                <div class="tic">|</div>
+                                <div class="tic">|</div>
+                                <div class="tic">|</div>
+                                <div class="tic">|</div>
+                                <div class="tic">|</div>
+                                <div class="tic">|</div>
+                                <div class="tic">|</div>
+                                <div class="tic">|</div>
+                           	 	<div class="statusbartext">Night 1</div>
+                           	 	<div class="statusbartext">Night 2</div>
+                            	<div class="statusbartext">Night 3</div>
+                            </div>
+							<script>
+                                $( ".statusbar" ).progressbar({
+                                    value: 100/12*9
+									//add code here; each segment is 100/12 wide, so change the last integer for your different values. or you can play around so that it lines up with the tic marks
+                                });
+                            </script>
+                        
+                        <p>{{ course.affiliation }}</p>
+                    </div>
+                    <div class="date">
+                    	<p>{{ course.startdate }}</p>
+                    </div>
+                </div>
+                <!--end block-->
+                
+                <h2>Courses Coming Soon!</h2>
+                <table id="courseTable" class="tablesorter">
+                    <thead>
+                        <tr>
+                            <th>Course Title</th>
+                            <th>Instructor</th>
+                            <th>Start Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	<!--code for each row -->
+                        <tr>
+                            <td><img src="{{ STATIC_URL }}images/block/{{ course.number }}.png"  width="75px" /><br /><a href="/course/{{ course.number ))info/">{{ course.title }}</a></td>
+                            <td>{{ course.instructor }} ({{ course.affiliation }})</td>
+                            <td>{{ course.startdate }}</td>
+                        </tr>
+                        <!-- end row -->
+                    </tbody>
+                </table>
+                
+            </div>
+	
+		</div>
+
+{% endblock %}
