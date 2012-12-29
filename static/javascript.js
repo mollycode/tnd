@@ -1,6 +1,6 @@
-$(document).ready(function() 
-    { 
+$(document).ready(function() { 
         $("#courseTable").tablesorter( {sortList: [[2,0], [0,0]]} ); 
+		$("ul.thumbnails").ytplaylist({addThumbs:true, autoPlay: false, holderId: 'ytvideo1'});
     } 
 ); 
 
