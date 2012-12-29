@@ -1,9 +1,29 @@
 # Create your views here.
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-def course(request):
-    return render(request, "course.html")
+from courses.models import Course
+
+def course(request, course_id, night, clip):
+    td = {}
+    td['course_id'] = int(course_id)
+    td['night'] = int(night)
+    td['clip'] = int(clip)
+
+    return render(request, "course.html", td)
+
+def info(request, course_id):
+    td = {}
+    td['course_id'] = int(course_id)
+    td['course'] = Course.objects.get(pk = int(course_id))
+
+    return render(request, "info.html", td)
+
+def discussion(request):
+    return redirect("main.views.home")
+
+def get_out(request):
+    return redirect("main.views.home")
 
 # temporary course pages
 

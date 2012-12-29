@@ -1,29 +1,49 @@
+import os
+
 from django.db import models
 from django.contrib.auth.models import User
+  
+def get_course_image_path(instance, filename):
+    return os.path.join('courses', str(instance.id), filename)
 
-# Create your models here.
+def get_instructor_image_path(instance, filename):
+    return os.path.join('instructors', str(instance.id), filename)
+
+class Instructor(models.Model):
+    name = models.CharField(max_length = 200)
+    title = models.CharField(max_length = 200)
+    user = models.ForeignKey(User, null = True, blank = True)
+    image = models.ImageField(upload_to = get_instructor_image_path, null = True, blank = True)
+    about = models.TextField(null = True, blank = True)
+    
+    def __unicode__(self):
+        return self.name
 
 class Course(models.Model):
-    professor = models.ForeignKey(User)
+    instructor = models.ForeignKey(Instructor)
     title = models.CharField(max_length = 200)
-    description = models.CharField(max_length = 1000)
+    description = models.TextField(null = True, blank = True)
+    image = models.ImageField(upload_to = get_course_image_path, null = True, blank = True)
     
     def __unicode__(self):
         return self.title
-    
+
 class CourseNight(models.Model):
     course = models.ForeignKey(Course)
     night = models.IntegerField()
+    title = models.CharField(max_length = 200, null = True, blank = True)
+    description = models.TextField(null = True, blank = True)
     
     def __unicode__(self):
-        return str(self.course) + ": " + str(self.night)
+        return str(self.course) + ": Night " + str(self.night)
 
 class Clip(models.Model):
     course_night = models.ForeignKey(CourseNight)
-    youtube_video = models.URLField()
     clip_num = models.IntegerField()
+    title = models.CharField(max_length = 200, null = True, blank = True)
+    youtube_video = models.URLField()
+    description = models.TextField(null = True, blank = True)
     
-    """
     def __unicode__(self):
-        return course_night.course + ": " + course_night.night + " - clip " + self.clip_num
-        """
+        return str(self.course_night) + ": Clip " + str(self.clip_num)
+
