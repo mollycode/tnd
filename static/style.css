@@ -103,13 +103,13 @@ body {
 	padding-top: 10px;
 }
 
-.navtitle a, a:visited {
+.navtitle a, .navtitle a:visited {
 	text-decoration: none;
 	color: #4a4a4a;
 	font-size: inherit;
 }
 
-.navactive a, a:visited {
+.navactive a, .navactive a:visited {
 	text-decoration: none;
 	color: #f97107;
 }
@@ -499,7 +499,9 @@ body {
 	margin: 0;
 }
 
-#personaldone .doneblock p.certificate a, a:visited, a:hover {
+#personaldone .doneblock p.certificate a, 
+#personaldone .doneblock p.certificate a:visited, 
+#personaldone .doneblock p.certificate a:hover {
 	font-family: 'OpenSansLight';
 	font-weight: normal;
 	font-size: 14px;
@@ -546,12 +548,14 @@ body {
 	color: #9b9b9b;
 }
 
-#profiletitle a, a:visited {
+#profiletitle a, 
+#profiletitle a:visited {
 	text-decoration: none;
 	color: inherit;
 }
 
-#profiletitle a, a:visited {
+#profiletitle a, 
+#profiletitle a:visited {
 	text-decoration: none;
 	color: inherit;
 }
@@ -562,7 +566,7 @@ body {
 	width: 100%;
 }
 
-#coursemain{
+#coursecontent #coursemain{
 	position: relative;
 	width: 100%;
 	text-align: center;
@@ -572,7 +576,7 @@ body {
 	height: 55px;
 }
 
-#coursenighttitle{
+#coursecontent #coursenighttitle{
 	position: relative;
 	width: 100%;
 	text-align: center;
@@ -580,7 +584,7 @@ body {
 	border-bottom: 1px solid #BBB;
 }
 
-#coursenighttitle .menuactive {
+#coursecontent #coursenighttitle .menuactive {
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 	background-color: #f97205;
@@ -592,7 +596,7 @@ body {
 }
 
 
-#coursenighttitle .menu {
+#coursecontent #coursenighttitle .menu {
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 	background-color: #e3e1e1;
@@ -603,17 +607,18 @@ body {
 	size: 24px;
 }
 
-#coursenighttitle a, a:visited {
+#coursecontent #coursenighttitle a, 
+#coursecontent #coursenighttitle a:visited {
 	text-decoration: none;
 	color: inherit;
 }
 
 
-#coursemain {
+#coursecontent #coursemain {
 	width: 100%;
 }
 
-#coursevideo {
+#coursecontent #coursevideo {
 	height: auto;
 	text-align: center;
 	border: 1px solid #CCC;
@@ -627,31 +632,32 @@ body {
 	margin-bottom: 100px;
 }
 
-#coursevideo #ytvideo {
+#coursecontent #coursevideo #ytvideo {
 	position: relative;
 	display: inline-block;
 	border: 1px solid #000;
 	margin: 5px;
 }
 
-#coursemain #list {
+#coursecontent #coursemain #list {
 	position: relative;
 	text-align: center;
 	margin-top: 30px;
 }
 
-#coursemain ul {
+#coursecontent #coursemain ul {
 	list-style-type: none;
 }
 
-#coursemain li {
+#coursecontent #coursemain li {
 	display: block;
 	float: left;
 	padding: 0;
 	margin: 2px;
 }
 
-#coursemain li a, a:hover {
+#coursecontent #coursemain li a, 
+#coursecontent #coursemain li a:hover {
 	display: block;
 	float: left;
 	text-decoration: none;
@@ -659,18 +665,18 @@ body {
 	margin: 2px;
 }
 
-#coursemain .thumbnails img {
+#coursecontent #coursemain .thumbnails img {
 	width: 170px;
 }
 
-#coursemain .thumbnails {
+#coursecontent #coursemain .thumbnails {
 	position: relative;
 	display: inline-block;
 	padding: 5px;
 	margin: 0;
 }
 
-#coursemain h2{
+#coursecontent #coursemain h2{
 	font-family: 'OpenSans';
 	font-size: 24px;
 	font-weight: normal;
@@ -679,7 +685,7 @@ body {
 	margin: 10px 0px 0px 105px;
 }
 
-#coursemain h3{
+#coursecontent #coursemain h3{
 	font-family: 'OpenSansLight';
 	font-size: 18px;
 	font-weight: normal;
@@ -735,7 +741,7 @@ body {
 	size: 24px;
 }
 
-#coursenighttitle a, a:visited {
+#coursenighttitle a, #coursenighttitle a:visited {
 	text-decoration: none;
 	color: inherit;
 }
@@ -873,7 +879,7 @@ body {
 	size: 24px;
 }
 
-#abouttitle a, a:visited {
+#abouttitle a, #abouttitle a:visited {
 	text-decoration: none;
 	color: inherit;
 }
