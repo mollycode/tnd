@@ -1,7 +1,7 @@
 from django.contrib import admin
-from courses.models import Instructor, Course, CourseNight, Clip
+from courses.models import Instructor, Course, Night, Clip
 
 admin.site.register(Instructor)
 admin.site.register(Course)
-admin.site.register(CourseNight)
+admin.site.register(Night)
 admin.site.register(Clip)

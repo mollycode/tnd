@@ -28,9 +28,9 @@ class Course(models.Model):
     def __unicode__(self):
         return self.title
 
-class CourseNight(models.Model):
+class Night(models.Model):
     course = models.ForeignKey(Course)
-    night = models.IntegerField()
+    night_num = models.IntegerField()
     title = models.CharField(max_length = 200, null = True, blank = True)
     description = models.TextField(null = True, blank = True)
     
@@ -38,7 +38,7 @@ class CourseNight(models.Model):
         return str(self.course) + ": Night " + str(self.night)
 
 class Clip(models.Model):
-    course_night = models.ForeignKey(CourseNight)
+    course_night = models.ForeignKey(Night)
     clip_num = models.IntegerField()
     title = models.CharField(max_length = 200, null = True, blank = True)
     youtube_video = models.URLField()

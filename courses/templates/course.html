@@ -14,7 +14,7 @@
             		their personal page-->
             	{% for i in nights %}
             		<a href="/course/{{ course_id }}/{{ i }}/1/">
-            		{% if night == i %}
+            		{% if night_num == i %}
             			<div class="menuactive">
             		{% else %}
             			<div class="menu">
@@ -25,8 +25,13 @@
                 <a href="#"><div class="menu">Discussion</div></a> <!--link to discussion for this course only; same logic as above-->
             </div>
             <div id="coursemain">
-            	<h2>Title</h2>
-                <h3>Instructor</h3>
+            	<h2>{% if night.title == "" %}
+            			{{ course.title }}
+            		{% else %}
+            			{{ night.title}}
+            		{% endif %}
+            	</h2>
+                <h3>{{ instructor.name }}</h3>
                 <div id="coursevideo">
                 	<!--imbed video here-->
                     <div id="ytvideo"></div>

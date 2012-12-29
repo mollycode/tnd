@@ -18,24 +18,23 @@
                     	{{ course.description|safe }}
                     </div>
                     <div class="right">
-                    	<img src="{{ STATIC_URL }}images/blocks/cambron.png" width="360px" height="240px"/>
+                    	<img src="{{ course.image }}" width="360px" height="240px"/>
                     </div>
                 </div>
                 <div class="course">
                 	<h3>Course Schedule</h3>
-                    <h2><a href="#">Night 1</a> An Introduction, Network of Networks </h2> <!--link to night 1-->
-                    <p>The Internet is not a single network, but rather a federation of tens of thousands of network operators interconnected using common standards for communication, addressing and operation. This hour introduces the Internet and key protocols like IP and TCP.</p>
-                    <h2><a href="#">Night 2</a> Local Area Networks (LANs) and Wide Area Networks (WANs)</h2> <!--link to night 2-->
-                    <p>This hour introduces Local Area Networks (LANs) and shows how they are connected to Wide Area Networks (WANs) to form the Internet.  It also describes how WANs interconnect, how web site addresses like google.com are translated into routable addresses and how they are accessed.</p>
-                    <h2><a href="#">Night 3</a> Services and Operation</h2> <!--link to night 3-->
-                    <p>Delivery of voice and video over the Internet rely on end to end services and protocols. This hour explores how those services work and shows how a remarkably reliable network is composed of unreliable systems.  As the successor to the current Internet protocol (IPv4), IPv6 is described as well as the process of transition.</p><br /><br />
+                    <h2><a href="/course/{{ course_id }}/1/1/">Night 1</a> {{ night_1.title }}</h2> <!--link to night 1-->
+                    <p>{{ night_1.description }}</p>
+                    <h2><a href="/course/{{ course_id }}/2/1/">Night 2</a> {{ night_2.title }}</h2> <!--link to night 2-->
+                    <p>{{ night_2.description }}</p>
+                    <h2><a href="/course/{{ course_id }}/2/1/">Night 3</a> {{ night_3.title }}</h2> <!--link to night 3-->
+                    <p>{{ night_3.description }}</p><br /><br />
                 </div>
                 
                 <div class="author">
                 <h3>About the Instructor(s)</h3>
-                <p>Author of <i>Global Networks: Engineering, Operations and Design</i></p>
-                <img src="{{ STATIC_URL }}images/author/cambron.jpg" height="210px" />
-                <p><span style="font-size: 24px">Keith Cambron</span> served as President & CEO of AT&T Labs, Inc., AT&T's applied research, engineering and development subsidiary from 2006 until mid-2011. He has broad experience in telecommunications networks, technology and design, ranging from circuit board and software design to the implementation of large public voice, data and video networks. Before the 2005 merger with AT&T, he served as President & CEO of SBC Laboratories. Keith began his career in telecommunications at Bell Telephone Laboratories in 1977 and has been profiled in Telephony and America's Network, and was named by CRN Magazine as one of the top 25 technology thought leaders in 2010. He received Telephony Magazine's Network Design and Implementation Award for Fiber in the Loop and has published articles in the Bell Communications Research Exchange and IEEE Communications Magazine, and received the 2007 IEEE ComSoc CQR Chairman's Award from the Technical Committee on Communications Quality & Reliability (CQR) for sustained contributions in the field of network reliability, technology introduction, and leadership in the research and development of telecommunications systems. He holds ten patents for the design of telecommunications software and systems. Keith received his B.S.E.E. from the University of Missouri and an M.S. in Systems Management from the University of Southern California. He is a retired Commander in the United States Naval Reserve.</p>
+                <img src="{{ instructor.image }}" height="210px" />
+                <p><span style="font-size: 24px">{{ instructor.name }}</span> {{ instructor.about|safe }}</p>
                 </div>
             </div>
         </div>
