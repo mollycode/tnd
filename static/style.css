@@ -585,7 +585,7 @@ body {
 	-moz-border-radius: 4px;
 	background-color: #f97205;
 	display: inline-block;
-	padding: 10px 35px 8px 35px;
+	padding: 6px 35px 6px 35px;
 	margin: 0px 7px 0px 7px;
 	color: #FFF;
 	size: 24px;
@@ -609,58 +609,84 @@ body {
 }
 
 
+#coursemain {
+	width: 100%;
+}
+
 #coursevideo {
+	height: auto;
+	text-align: center;
+	border: 1px solid #CCC;
+	-webkit-border-radius: 2px; 
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	font-size: 12px;
+	margin-bottom: 100px;
+}
+
+#coursevideo #ytvideo {
 	position: relative;
 	display: inline-block;
-	width: 730px;
-	height: 490px;
-	top: 10px;
-	background-color: #FFF;
-	padding: 5px;
-	border: 1px solid #999;
+	border: 1px solid #000;
+	margin: 5px;
 }
 
-#coursedescription{
+#coursemain #list {
 	position: relative;
-	top: 30px;
-	width: 99%;
-	height: 225px;
-	background-color: #FFF;
-	overflow: hidden;
-	border-bottom: 1px solid #BBB;
+	text-align: center;
+	margin-top: 30px;
 }
 
-#coursedescription .title {
-	padding: 15px 0px 10px 0px;
-	margin: 0;
+#coursemain ul {
+	list-style-type: none;
 }
 
-#coursedescription h3 {
-	margin: 0;
-	padding: 0px 0px 0px 10px;
-	font-size: 16px;
-	color: #000;
+#coursemain li {
+	display: block;
+	float: left;
+	padding: 0;
+	margin: 2px;
 }
 
-#coursedescription p {
-	padding: 15px 10px 5px 10px;
-	margin: 0;
-	font-size: 14px;
-	color: #888;
-}
-
-#coursedescription a {
+#coursemain li a, a:hover {
+	display: block;
+	float: left;
 	text-decoration: none;
-	font-size: 14px;
-	color: #fa8d39;
+	padding: 0;
+	margin: 2px;
 }
 
-#coursedescription a:hover {
-	text-decoration: none;
-	font-size: 14px;
-	color: #f97107;
+#coursemain .thumbnails img {
+	width: 170px;
 }
 
+#coursemain .thumbnails {
+	position: relative;
+	display: inline-block;
+	padding: 5px;
+	margin: 0;
+}
+
+#coursemain h2{
+	font-family: 'OpenSans';
+	font-size: 24px;
+	font-weight: normal;
+	text-align: left;
+	padding: 0;
+	margin: 10px 0px 0px 105px;
+}
+
+#coursemain h3{
+	font-family: 'OpenSansLight';
+	font-size: 18px;
+	font-weight: normal;
+	text-align: left;
+	padding: 0;
+	margin: 3px 0px 0px 105px;
+}
 /*courseinfo page*/
 
 #courseinfocontent {

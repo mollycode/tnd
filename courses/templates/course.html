@@ -25,12 +25,25 @@
                 <a href="#"><div class="menu">Discussion</div></a> <!--link to discussion for this course only; same logic as above-->
             </div>
             <div id="coursemain">
+            	<h2>Title</h2>
+                <h3>Instructor</h3>
                 <div id="coursevideo">
                 	<!--imbed video here-->
+                    <div id="ytvideo"></div>
+                    <div id="list">
+                        <ul class="thumbnails">
+                            <li><a href="http://www.youtube.com/watch?v=oO45qeAnPAU"></a></li>
+                            <li><a href="http://www.youtube.com/watch?v=aImsn616lRU"></a></li>
+                            <li><a href="http://www.youtube.com/watch?v=oO45qeAnPAU"></a></li>
+                            <li><a href="http://www.youtube.com/watch?v=aImsn616lRU"></a></li>
+                        </ul>
+                    </div>
                 </div>
-                
-              
-            </div>
+           </div>
+           
+           <script>
+		   		$("ul.thumbnails").ytplaylist({addThumbs:true, autoPlay: false, holderId: 'ytvideo'});
+		   </script>
             
         </div>
 {% endblock %}
