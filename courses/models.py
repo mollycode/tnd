@@ -35,7 +35,7 @@ class Night(models.Model):
     description = models.TextField(null = True, blank = True)
     
     def __unicode__(self):
-        return str(self.course) + ": Night " + str(self.night)
+        return str(self.course) + ": Night " + str(self.night_num)
 
 class Clip(models.Model):
     course_night = models.ForeignKey(Night)
