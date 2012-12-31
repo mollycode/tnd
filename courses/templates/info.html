@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <div id="courseinfocontent">
+        	<div id="coursenighttitle"><!--this section/format is same for all the other course landing pages; not sure if there's a way to just have static content for the course description, instructor, schedule, etc. or not?-->
+            	<div class="search"></div><br />
+                <a href="#"><div class="menuactive1">Course Info</div></a> <!--link to this current page -->
+            	<a href="/course/{{ course_id }}/1/1/"><div class="menu">Night 1</div></a> <!--link to night 1; if course hasn't been added yet, have a pop-up box that prompts if they want to add course to their personal page-->
+                <a href="/course/{{ course_id }}/2/1/"><div class="menu">Night 2</div></a> <!--link to night 2; same logic as above-->
+                <a href="/course/{{ course_id }}/3/1/"><div class="menu">Night 3</div></a> <!--link to night 3; same logic as above-->
+                <a href="#"><div class="menu">Discussion</div></a> <!--link to discussion for this course only; same logic as above-->
+            </div>
+            <div id="courseinfomain">
+                
+                <div id="courseinfodescription">
+                	<h1>{{ course.instructor.name }}: {{ course.title }}</h1>
+                    <div class="left">
+                    	{{ course.description|safe }}
+                    </div>
+                    <div class="right">
+                    	<img src="{{ course.image }}" width="360px" height="240px"/>
+                    </div>
+                </div>
+                <div class="course">
+                	<h3>Course Schedule</h3>
+                    <h2><a href="/course/{{ course_id }}/1/1/">Night 1</a> {{ night_1.title }}</h2> <!--link to night 1-->
+                    <p>{{ night_1.description }}</p>
+                    <h2><a href="/course/{{ course_id }}/2/1/">Night 2</a> {{ night_2.title }}</h2> <!--link to night 2-->
+                    <p>{{ night_2.description }}</p>
+                    <h2><a href="/course/{{ course_id }}/2/1/">Night 3</a> {{ night_3.title }}</h2> <!--link to night 3-->
+                    <p>{{ night_3.description }}</p><br /><br />
+                </div>
+                
+                <div class="author">
+                <h3>About the Instructor(s)</h3>
+                <img src="{{ instructor.image }}" height="210px" />
+                <p><span style="font-size: 24px">{{ instructor.name }}</span> {{ instructor.about|safe }}</p>
+                </div>
+            </div>
+        </div>
+{% endblock %}

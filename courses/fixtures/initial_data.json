@@ -1,0 +1,235 @@
+[
+	{
+		"pk": 1,
+		"model": "courses.instructor",
+		"fields": {
+			"about": "holds the position of Director of Demand Forecasting and Rate Development. At NECA since 1984, Mr. Glass is currently responsible for forecasting demand and setting switched and special rates for more than 1100 telephone companies. During recent years, he has been heavily involved in access restructure, universal service reform, and new access services. He is the lead author of NECA's \"Last Mile,\" \"Middle Mile,\" and \"Packet Train\" broadband studies and NECA's \"Rural Cost Trends\" study. He co-authored \"U.S. Broadband Goals: Managing the Spillover Effects\" with Princeton University's Edge Group. He has contributed to Legg Mason's quarterly Equity Research Report, to Prudential Equity Group's Telecom/Rural Wireline Report, and served as an advisor to the Telecommunications Group at Goldman Sachs. His articles have appeared in America's Network, Rural Telecommunications, Xchange, Opastco Advocate, Government Information Quarterly, Journal of Business and Economic Studies, Journal of Business Forecasting, Energy Economics, American Economist, and Journal of Regulatory Economics. He is a member of the Rural Policy Research Institute's telecommunications panel and the Center for Research in Regulatory Industries (CRRI). Dr. Glass earned his MBA in marketing and finance, and Ph.D. in economics from Columbia University. ",
+			"user": null,
+			"name": "Victor Glass",
+			"image": "/static/images/author/glass.jpg",
+			"title": "Director, National Ex. Carrier Asso.",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 2,
+		"model": "courses.instructor",
+		"fields": {
+			"about": "served as President & CEO of AT&T Labs, Inc., AT&T's applied research, engineering and development subsidiary from 2006 until mid-2011. He has broad experience in telecommunications networks, technology and design, ranging from circuit board and software design to the implementation of large public voice, data and video networks. Before the 2005 merger with AT&T, he served as President & CEO of SBC Laboratories. Keith began his career in telecommunications at Bell Telephone Laboratories in 1977 and has been profiled in Telephony and America's Network, and was named by CRN Magazine as one of the top 25 technology thought leaders in 2010. He received Telephony Magazine's Network Design and Implementation Award for Fiber in the Loop and has published articles in the Bell Communications Research Exchange and IEEE Communications Magazine, and received the 2007 IEEE ComSoc CQR Chairman's Award from the Technical Committee on Communications Quality & Reliability (CQR) for sustained contributions in the field of network reliability, technology introduction, and leadership in the research and development of telecommunications systems. He holds ten patents for the design of telecommunications software and systems. Keith received his B.S.E.E. from the University of Missouri and an M.S. in Systems Management from the University of Southern California. He is a retired Commander in the United States Naval Reserve.",
+			"user": null,
+			"name": "Keith Cambron",
+			"image": "/static/images/author/cambron.jpg",
+			"title": "former CEO, AT&T Labs",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 3,
+		"model": "courses.instructor",
+		"fields": {
+			"about": "is a managing director of Cross Atlantic Capital Partners and has been with the firm since 1999. A venture capitalist with extensive investment experience in Software, Mobile/Wireless and Internet Technologies, he has in depth expertise with a wide array of companies including Netsuite, Infoblox, ICG Commerce, R2 Technology, Navini Networks, and Interactions. Richard has worked closely with entrepreneurs in multiple portfolio companies in a wide variety of different industries and has served as a director on the board of numerous companies. </p><p>Richard has close to 30 years of investment experience in venture capital, institutional investing, and commercial banking. Prior to joining Cross Atlantic, he was president of Penn Janney Advisory, which managed both the direct private equity and partnership investments for The Penn Mutual Life Insurance Company and its wholly owned subsidiary, Janney Montgomery Scott. Before joining Penn Mutual, he was a vice president in the corporate lending division of PNC Bank and managed a portfolio of large corporate relationships. Richard began his career with Chemical Bank's (now J. P. Morgan's) Latin American Division, where he held a number of management positions. Richard also serves as an adjunct associate professor at New York University where, for the last 30 years, he has taught Intensive Credit Training seminars to both domestic and foreign bankers. </p><p>Richard received a B.A. from the University of Connecticut (1977) and an M.A. from Georgetown University (1980).</p>",
+			"user": null,
+			"name": "Richard M. Fox",
+			"image": "/static/images/author/fox.jpg",
+			"title": "MD, Cross Atlantic Capital Partners",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 4,
+		"model": "courses.instructor",
+		"fields": {
+			"about": "is Chairman and CEO of ASSIA Inc, a Redwood City, CA based company pioneering DSL management software sold to DSL service providers, specifically known for introducing Dynamic Spectrum Management or DSM.  He is also the Hitachi Professor Emeritus at Stanford University, where he held a tenured endowed professorship before retiring after 22 full-time years.  Cioffi received his BSEE, 1978,  Illinois; PhDEE,  1984, Stanford; Honorary Doctorate, University of Edinburgh 2010;  Bell Laboratories, 1978-1984; IBM Research, 1984-1986; EE Prof., Stanford, 1986-2008.   Cioffi also founded Amati Com. Corp in 1991 (purchased by TI in 1997 for its DSL technology) and was officer/director from 1991-1997.  Cioffi designed the world's first ADSL and VDSL modems, which design today accounts for roughly 98% of the worlds over 400 million DSL connections.</p><p>Cioffi currently also services the Board of Directors of Alto Beam and the Marconi Foundation and has previously served the boards of 8 other public and private companies.  Various other awards include IEEE Alexander Graham Bell, Kobayashi, and Millenium Medals/Awards (2010, 2001, 2000), Economist Magazine's 2010 Innovation Award, International Marconi Fellow (2006); Member, United States National and UK Royal Academies of Engineering (2001, 2009); IEEE Fellow (1996); IEE JJ Tomson Medal (2000); 1999 U. of Illinois Outstanding Alumnus and 2010 Distinguished Alumnus.  Cioffi has published several hundred technical papers and is the inventor named on over 100 additional patents, many of which are heavily licensed in the communication industry.",
+			"user": null,
+			"name": "John Cioffi",
+			"image": "/static/images/author/cioffi.jpg",
+			"title": "Founder/Chairman/CEO, ASSIA",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 1,
+		"model": "courses.course",
+		"fields": {
+			"available": true,
+			"description": "<p>The U.S. government has committed itself to universal broadband service availability and high customer adoption rates. This short course will focus on three basic questions whose answers are critical to developing effective government policy:</p><ul><li>What is the definition of universal broadband service? </li><li>Where are we now?</li><li>How do we reach the goal?</li></ul><p>The answer to each question is controversial. This course will focus on key market developments, regulatory history and recent government proposals that will help the viewer develop informed opinions on the broadband debate. A deeper goal is to develop a framework for evaluating other government policy issues. As you will see, the broadband debate is a microcosm of the fiscal debates in Washington (e.g. role of government, type of regulation needed, who pays and how much).No prerequisites are necessary for the course. A basic knowledge of economics would be helpful but not required. All technical terms taken from network design and economic theory will be explained by the presenter. </p>",
+			"title": "America's Quest for Universal Broadband Services",
+			"release_date": "2013-01-04",
+			"instructor": 1,
+			"image": "/static/images/blocks/glass.png",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 2,
+		"model": "courses.course",
+		"fields": {
+			"available": true,
+			"description": "In the space of 30 years the Internet went from a novelty used by engineers to become a part of our lives as essential as transportation. A third of the world's people use it and it has spread to virtually every country on earth. This three hour course explores the networks and technologies that work in concert to provide the wide range of services offered on the Internet. The course is organized into four fifteen minute videos per hour. Each video is accompanied by a self-exam of ten multiple choice questions. There are no prerequisites, but students should have experience using the Internet and an interest in learning more about the technologies that enable it. Students who pass the course will gain a better understanding of how the networks are interconnected, how the Internet is organized and how it operates.",
+			"title": "How The Internet Works",
+			"release_date": "2013-01-04",
+			"instructor": 2,
+			"image": "/static/images/blocks/cambron.png",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 3,
+		"model": "courses.course",
+		"fields": {
+			"available": true,
+			"description": "Taught by a venture capitalist, this seminar will provide a practical approach to the fundamentals of venture capital investing and the structure of the venture capital industry. Specific topics include investment selection, due diligence, valuation, negotiation, portfolio company management, exits, limited partners, and firm management. Case studies will be used to assist students understanding for the practical aspects of the business as well as the current state of the venture capital industry.",
+			"title": "Invention to Venture",
+			"release_date": "2013-01-04",
+			"instructor": 3,
+			"image": "/static/images/blocks/fox.png",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 4,
+		"model": "courses.course",
+		"fields": {
+			"available": true,
+			"description": "<p>Digital Subscriber Lines (DSL) is today the dominant global form of broadband access and the underlying enabling technology of the internet as we know it today, although many may not be aware of this quiet but solid internet base.  This 3-night stand will review DSL at its inception to its present dominant position on nearly \u00bd billion phone lines and billions of off-loading wireless data of smarthphones and tablets that use DSL daily.</p><p>In so doing, the short course explain the key basic technologies as DSL progressed from replacing voiceband modems with 10x their bandwidth in the mid 1990's, allowing the worldwide web to flourish (from its disappointing \"World Wide Wait\" status) into the medium we all use regularly today enabling many powerful new applications from web surfing to video/voice conferencing worldwide to IPTV and other forms of video to an essential component of todays mobile data successes.</p><p>This continuing success required a number of fundamental technological innovations so that the existing wired and wireless infrastructure could economically keep pace with consumer's insatiable need for more and more digital data.  Speeds of initially 1 Mbps to 10's of Mbps and now to 100's of Mbps make it the fastest broadband medium per user (noting cable, fiber, and pure wireless share many customers so their per-user bandwidths are often misquoted).  As wireless data needs increase, perhaps driven increasingly by machines and things along with people, more recent technological innovations will also be cited that will continue DSL's growth over the next decades.</p>",
+			"title": "What is DSL?",
+			"release_date": "2013-01-04",
+			"instructor": 4,
+			"image": "/static/images/blocks/cioffi.png",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 1,
+		"model": "courses.night",
+		"fields": {
+			"course": 1,
+			"night_num": 1,
+			"description": "",
+			"title": "What is the definition of universal broadband service?",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 2,
+		"model": "courses.night",
+		"fields": {
+			"course": 1,
+			"night_num": 2,
+			"description": "",
+			"title": "Where are we now?",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 3,
+		"model": "courses.night",
+		"fields": {
+			"course": 1,
+			"night_num": 3,
+			"description": "",
+			"title": "How do we reach the goal?",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 4,
+		"model": "courses.night",
+		"fields": {
+			"course": 2,
+			"night_num": 1,
+			"description": "The Internet is not a single network, but rather a federation of tens of thousands of network operators interconnected using common standards for communication, addressing and operation. This hour introduces the Internet and key protocols like IP and TCP.",
+			"title": "An Introduction, Network of Networks ",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 5,
+		"model": "courses.night",
+		"fields": {
+			"course": 2,
+			"night_num": 2,
+			"description": "This hour introduces Local Area Networks (LANs) and shows how they are connected to Wide Area Networks (WANs) to form the Internet. It also describes how WANs interconnect, how web site addresses like google.com are translated into routable addresses and how they are accessed.",
+			"title": "Local Area Networks (LANs) and Wide Area Networks (WANs)",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 6,
+		"model": "courses.night",
+		"fields": {
+			"course": 2,
+			"night_num": 3,
+			"description": "Delivery of voice and video over the Internet rely on end to end services and protocols. This hour explores how those services work and shows how a remarkably reliable network is composed of unreliable systems. As the successor to the current Internet protocol (IPv4), IPv6 is described as well as the process of transition.",
+			"title": "Services and Operation",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 7,
+		"model": "courses.night",
+		"fields": {
+			"course": 3,
+			"night_num": 1,
+			"description": "",
+			"title": "What is the definition of universal broadband service?",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 8,
+		"model": "courses.night",
+		"fields": {
+			"course": 3,
+			"night_num": 2,
+			"description": "",
+			"title": "",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 9,
+		"model": "courses.night",
+		"fields": {
+			"course": 3,
+			"night_num": 3,
+			"description": "",
+			"title": "",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 10,
+		"model": "courses.night",
+		"fields": {
+			"course": 4,
+			"night_num": 1,
+			"description": "",
+			"title": "",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 11,
+		"model": "courses.night",
+		"fields": {
+			"course": 4,
+			"night_num": 2,
+			"description": "",
+			"title": "",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}, {
+		"pk": 12,
+		"model": "courses.night",
+		"fields": {
+			"course": 4,
+			"night_num": 3,
+			"description": "",
+			"title": "",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}
+]

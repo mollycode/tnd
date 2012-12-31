@@ -1,10 +1,17 @@
 from django.conf.urls import patterns, include, url
 
-urlpatterns = patterns('',
+urlpatterns = patterns('users.views',
 
-    url(r'^login/$', 'users.views.login'),
-    url(r'^profile/$', 'users.views.profile'),
-    url(r'^register/$', 'users.views.register'),
+    url(r'^login/$', 'login'),
+    url(r'^profile/$', 'profile'),
+    url(r'^register/$', 'register'),
+    url(r'^currentlessons/$', 'currentlessons'),
+    url(r'^completedcourses/$', 'completedcourses'),
     
-    url(r'^logout/$', 'users.views.logout'),
+    url(r'^addcourse/(?P<course_id>\d+)/$', 'addcourse'),
+    url(r'^finishcourse/(?P<course_id>\d+)/$', 'finishcourse'),
+    
+    url(r'^logout/$', 'logout'),
+    
+    url(r'^$', 'redirector'),
 )

@@ -49,18 +49,18 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = os.path.join(SITE_ROOT, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = '/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = '' # os.path.join(SITE_ROOT, 'static')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -127,6 +127,8 @@ INSTALLED_APPS = (
     'main',
     'users',
     'courses',
+    'quizzes',
+    'logger',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -161,3 +163,16 @@ LOGGING = {
 AUTH_PROFILE_MODULE = 'users.UserProfile'
 
 LOGIN_URL = '/users/login/'
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_HOST_USER = '3ndteam@gmail.com'
+# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+EMAIL_HOST_PASSWORD = 'MungChiang'
+
+EMAIL_PORT = "587"
+
+EMAIL_SUBJECT_PREFIX = "[3ND] "
+
+EMAIL_USE_TLS = True
