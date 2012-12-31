@@ -1,17 +1,17 @@
 from django.conf.urls import patterns, include, url
 
-urlpatterns = patterns('',
+urlpatterns = patterns('courses.views',
 
-    url(r'^(?P<course_id>\d+)/(?P<night_num>\d+)/(?P<clip_num>\d+)/$', 'courses.views.course'),
-    url(r'^(?P<course_id>\d+)/info/$', 'courses.views.info'),
-    url(r'^(?P<course_id>\d+)/discussion/$', 'courses.views.discussion'),
+    url(r'^(?P<course_id>\d+)/(?P<night_num>\d+)/(?P<clip_num>\d+)/$', 'course'),
+    url(r'^(?P<course_id>\d+)/info/$', 'info'),
+    url(r'^(?P<course_id>\d+)/discussion/$', 'discussion'),
     
     # temporary course pages
     
-    url(r'^cambroncourseinfo/$', 'courses.views.cambron'),
-    url(r'^ciofficourseinfo/$', 'courses.views.cioffi'),
-    url(r'^foxcourseinfo/$', 'courses.views.fox'),
-    url(r'^glasscourseinfo/$', 'courses.views.glass'),
+    url(r'^cambroncourseinfo/$', 'cambron'),
+    url(r'^ciofficourseinfo/$', 'cioffi'),
+    url(r'^foxcourseinfo/$', 'fox'),
+    url(r'^glasscourseinfo/$', 'glass'),
     
-    url(r'^$', 'courses.views.get_out'),
+    url(r'^$', 'get_out'),
 )

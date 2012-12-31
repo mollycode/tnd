@@ -1,7 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-from extras import CountryField
+from courses.models import Course
+
+from users.extras import CountryField
 
 class UserProfile(models.Model):
     # This field is required.
@@ -37,6 +39,9 @@ class UserProfile(models.Model):
     education_level = models.CharField(max_length = 200, choices = EDUCATION_CHOICES)
     background_field = models.CharField(max_length = 200)
     desire = models.CharField(max_length = 10000, blank = True)
+    
+    current_courses = models.ManyToManyField(Course, related_name = "current_users")
+    finished_courses = models.ManyToManyField(Course, related_name = "finished_users")
 
 from django.db.models.signals import post_save
 
