@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+            <div id="personalcurrent">
+                    
+            	<h2>{{ question.text }}</h2>
+                
+                {% for answer in answers %}
+                <!--code for each block-->
+                <div class="courseblock">
+                    <div class="text">
+                        <p><a href="#">{{ answer.text }}</a></p>
+                    </div>
+                </div>
+                <!--end block-->
+                {% endfor %}
+                
+            </div>
+	
+		</div>
+
+{% endblock %}

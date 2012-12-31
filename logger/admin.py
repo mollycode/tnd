@@ -1,5 +1,5 @@
 from django.contrib import admin
-from logger.models import Instructor, Course, Night, Clip
+from logger.models import UserVisit, UserViewsCourse, UserViewsQuiz, UserAnswersQuestion
 
 admin.site.register(UserVisit)
 admin.site.register(UserViewsCourse)

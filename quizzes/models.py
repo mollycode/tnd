@@ -8,12 +8,21 @@ class Quiz(models.Model):
     date_created = models.DateTimeField(auto_now_add = True)
     date_modified = models.DateTimeField(auto_now = True)
     
+    class Meta:
+        verbose_name_plural = "quizzes"
+        
+    def __unicode__(self):
+        return str(self.clip) + " Quiz"
+    
 class Question(models.Model):
     quiz = models.ForeignKey(Quiz)
     text = models.TextField()
     
     date_created = models.DateTimeField(auto_now_add = True)
     date_modified = models.DateTimeField(auto_now = True)
+    
+    def __unicode__(self):
+        return self.text
     
 class Answer(models.Model):
     question = models.ForeignKey(Question)
@@ -22,3 +31,6 @@ class Answer(models.Model):
     
     date_created = models.DateTimeField(auto_now_add = True)
     date_modified = models.DateTimeField(auto_now = True)
+    
+    def __unicode__(self):
+        return str(self.question) + ": " + self.text
