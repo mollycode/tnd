@@ -127,6 +127,7 @@ INSTALLED_APPS = (
     'main',
     'users',
     'courses',
+    'quizzes',
 )
 
 # A sample logging configuration. The only tangible logging
