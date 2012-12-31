@@ -601,7 +601,7 @@ body {
 	-moz-border-radius: 4px;
 	background-color: #e3e1e1;
 	display: inline-block;
-	padding: 10px 35px 8px 35px;
+	padding: 6px 35px 6px 35px;
 	margin: 0px 7px 0px 7px;
 	color: #9b9b9b;
 	size: 24px;
@@ -1045,4 +1045,84 @@ body {
 	font-family: 'OpenSansLight';
 	font-size: 14px;
 	color: #535353;
+}
+
+
+/*about the team */
+
+#teamcontent h2{
+	font-family: 'OpenSansLight';
+	font-size: 20px;
+	font-weight: normal;
+	color: #000;
+	margin: 0;
+	padding: 30px 0px 15px 0px;
+}
+
+#teamcontent #members{
+	background-color: #f3f2ed;
+	width: 855px;
+	height: auto;
+	margin: 0;
+	padding: 10px;
+	align: center;
+}
+
+#teamcontent #members table {
+	position: relative;
+	align: center;
+}
+
+#teamcontent #members table tr {
+	padding: 0;
+	margin: 0;
+	align: center;
+}
+
+#teamcontent #members table tr td {
+	padding: 0;
+	margin: 0;
+}
+
+#teamcontent .memberblock {
+	background-color: #FFF;
+	margin: 2px;
+	width: 100px;
+	text-align: center;
+}
+
+#teamcontent .memberblock img {
+	align: center;
+	padding: 5px;
+	height: 93px;
+	width: 70px;
+}
+
+#teamcontent .membertext {
+	padding-top: 10px;
+	font-size: 12px;
+	display: inline-block;
+	
+}
+
+#teamcontent .membertext {
+	font-family: 'OpenSansLight';
+	font-size: 20px;
+	font-weight: normal;
+	padding-top: 10px;
+	font-size: 13px;
+	display: inline-block;
+	color: #444;
+	
+}
+
+#teamcontent .membertext b{
+	font-family: 'OpenSansLight';
+	font-size: 20px;
+	font-weight: normal;
+	padding: 2px;
+	font-size: 14px;
+	display: inline-block;
+	color: #000;
+	
 }
