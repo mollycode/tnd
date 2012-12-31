@@ -43,6 +43,9 @@ class UserProfile(models.Model):
     current_courses = models.ManyToManyField(Course, related_name = "current_users", null = True, blank = True)
     finished_courses = models.ManyToManyField(Course, related_name = "finished_users", null = True, blank = True)
     
+    date_created = models.DateTimeField(auto_now_add = True)
+    date_modified = models.DateTimeField(auto_now = True)
+    
     def __unicode__(self):
         return str(self.user) + "'s Profile"
 
@@ -66,12 +69,15 @@ def get_or_create_user_profile(request):
 class Enrollment(models.Model):
     user = models.ForeignKey(User)
     course = models.ForeignKey(Course)
-    date_added = models.DateTimeField()
     curr_night_num = models.IntegerField(null = True, blank = True)
     curr_clip_num = models.IntegerField(null = True, blank = True)
-    date_completed = models.DateTimeField(null = True, blank = True)
+
     gold_medal = models.BooleanField()
     silver_medal = models.BooleanField()
+    
+    date_created = models.DateTimeField(auto_now_add = True)
+    date_modified = models.DateTimeField(auto_now = True)
+    date_completed = models.DateTimeField(null = True, blank = True)
     
     def __unicode__(self):
         return str(self.user) + " taking " + str(self.course)

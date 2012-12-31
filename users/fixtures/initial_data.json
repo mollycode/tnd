@@ -1,1 +1,19 @@
-[{"pk": 1, "model": "users.userprofile", "fields": {"desire": "I want the site to work.", "first_name": "Andrew", "last_name": "Choi", "country": "US", "age": 20, "sex": "M", "user": 1, "education_level": "4YR", "background_field": "ORFE"}}, {"pk": 2, "model": "users.userprofile", "fields": {"desire": "", "first_name": "Charles", "last_name": "Charles", "country": "US", "age": 40, "sex": "M", "user": 2, "education_level": "HS", "background_field": "MATH"}}]
+[
+	{
+		"pk": 1,
+		"model": "users.userprofile",
+		"fields": {
+			"desire": "I want the site to work.",
+			"first_name": "Andrew",
+			"last_name": "Choi",
+			"country": "US",
+			"age": 20,
+			"sex": "M",
+			"user": 1,
+			"education_level": "4YR",
+			"background_field": "ORFE",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
+		}
+	}
+]

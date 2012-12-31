@@ -7,7 +7,9 @@
 			"user": null,
 			"name": "Victor Glass",
 			"image": "/static/images/author/glass.jpg",
-			"title": "Director, National Ex. Carrier Asso."
+			"title": "Director, National Ex. Carrier Asso.",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 2,
@@ -17,7 +19,9 @@
 			"user": null,
 			"name": "Keith Cambron",
 			"image": "/static/images/author/cambron.jpg",
-			"title": "former CEO, AT&T Labs"
+			"title": "former CEO, AT&T Labs",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 3,
@@ -27,7 +31,9 @@
 			"user": null,
 			"name": "Richard M. Fox",
 			"image": "/static/images/author/fox.jpg",
-			"title": "MD, Cross Atlantic Capital Partners"
+			"title": "MD, Cross Atlantic Capital Partners",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 4,
@@ -37,7 +43,9 @@
 			"user": null,
 			"name": "John Cioffi",
 			"image": "/static/images/author/cioffi.jpg",
-			"title": "Founder/Chairman/CEO, ASSIA"
+			"title": "Founder/Chairman/CEO, ASSIA",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 1,
@@ -48,7 +56,9 @@
 			"title": "America's Quest for Universal Broadband Services",
 			"release_date": "2013-01-04",
 			"instructor": 1,
-			"image": "/static/images/blocks/glass.png"
+			"image": "/static/images/blocks/glass.png",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 2,
@@ -59,7 +69,9 @@
 			"title": "How The Internet Works",
 			"release_date": "2013-01-04",
 			"instructor": 2,
-			"image": "/static/images/blocks/cambron.png"
+			"image": "/static/images/blocks/cambron.png",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 3,
@@ -70,7 +82,9 @@
 			"title": "Invention to Venture",
 			"release_date": "2013-01-04",
 			"instructor": 3,
-			"image": "/static/images/blocks/fox.png"
+			"image": "/static/images/blocks/fox.png",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 4,
@@ -81,7 +95,9 @@
 			"title": "What is DSL?",
 			"release_date": "2013-01-04",
 			"instructor": 4,
-			"image": "/static/images/blocks/cioffi.png"
+			"image": "/static/images/blocks/cioffi.png",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 1,
@@ -90,7 +106,9 @@
 			"course": 1,
 			"night_num": 1,
 			"description": "",
-			"title": "What is the definition of universal broadband service?"
+			"title": "What is the definition of universal broadband service?",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 2,
@@ -99,7 +117,9 @@
 			"course": 1,
 			"night_num": 2,
 			"description": "",
-			"title": "Where are we now?"
+			"title": "Where are we now?",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 3,
@@ -108,7 +128,9 @@
 			"course": 1,
 			"night_num": 3,
 			"description": "",
-			"title": "How do we reach the goal?"
+			"title": "How do we reach the goal?",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 4,
@@ -117,7 +139,9 @@
 			"course": 2,
 			"night_num": 1,
 			"description": "The Internet is not a single network, but rather a federation of tens of thousands of network operators interconnected using common standards for communication, addressing and operation. This hour introduces the Internet and key protocols like IP and TCP.",
-			"title": "An Introduction, Network of Networks "
+			"title": "An Introduction, Network of Networks ",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 5,
@@ -126,7 +150,9 @@
 			"course": 2,
 			"night_num": 2,
 			"description": "This hour introduces Local Area Networks (LANs) and shows how they are connected to Wide Area Networks (WANs) to form the Internet. It also describes how WANs interconnect, how web site addresses like google.com are translated into routable addresses and how they are accessed.",
-			"title": "Local Area Networks (LANs) and Wide Area Networks (WANs)"
+			"title": "Local Area Networks (LANs) and Wide Area Networks (WANs)",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 6,
@@ -135,7 +161,9 @@
 			"course": 2,
 			"night_num": 3,
 			"description": "Delivery of voice and video over the Internet rely on end to end services and protocols. This hour explores how those services work and shows how a remarkably reliable network is composed of unreliable systems. As the successor to the current Internet protocol (IPv4), IPv6 is described as well as the process of transition.",
-			"title": "Services and Operation"
+			"title": "Services and Operation",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 7,
@@ -144,7 +172,9 @@
 			"course": 3,
 			"night_num": 1,
 			"description": "",
-			"title": "What is the definition of universal broadband service?"
+			"title": "What is the definition of universal broadband service?",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 8,
@@ -153,7 +183,9 @@
 			"course": 3,
 			"night_num": 2,
 			"description": "",
-			"title": ""
+			"title": "",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 9,
@@ -162,7 +194,9 @@
 			"course": 3,
 			"night_num": 3,
 			"description": "",
-			"title": ""
+			"title": "",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 10,
@@ -171,7 +205,9 @@
 			"course": 4,
 			"night_num": 1,
 			"description": "",
-			"title": ""
+			"title": "",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 11,
@@ -180,7 +216,9 @@
 			"course": 4,
 			"night_num": 2,
 			"description": "",
-			"title": ""
+			"title": "",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}, {
 		"pk": 12,
@@ -189,7 +227,9 @@
 			"course": 4,
 			"night_num": 3,
 			"description": "",
-			"title": ""
+			"title": "",
+			"date_created": "2012-12-31T08:07:01-08:00",
+			"date_modified": "2012-12-31T08:07:01-08:00"
 		}
 	}
 ]

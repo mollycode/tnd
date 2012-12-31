@@ -16,6 +16,9 @@ class Instructor(models.Model):
     image = models.ImageField(upload_to = get_instructor_image_path, null = True, blank = True)
     about = models.TextField(null = True, blank = True)
     
+    date_created = models.DateTimeField(auto_now_add = True)
+    date_modified = models.DateTimeField(auto_now = True)
+    
     def __unicode__(self):
         return self.name
 
@@ -28,6 +31,9 @@ class Course(models.Model):
     release_date = models.DateField(null = True, blank = True)
     release_string = models.CharField(max_length = 100, null = True, blank = True)
     
+    date_created = models.DateTimeField(auto_now_add = True)
+    date_modified = models.DateTimeField(auto_now = True)
+    
     def __unicode__(self):
         return self.title
 
@@ -36,6 +42,9 @@ class Night(models.Model):
     night_num = models.IntegerField()
     title = models.CharField(max_length = 200, null = True, blank = True)
     description = models.TextField(null = True, blank = True)
+    
+    date_created = models.DateTimeField(auto_now_add = True)
+    date_modified = models.DateTimeField(auto_now = True)
     
     def __unicode__(self):
         return str(self.course) + ": Night " + str(self.night_num)
@@ -46,6 +55,9 @@ class Clip(models.Model):
     title = models.CharField(max_length = 200, null = True, blank = True)
     youtube_video = models.URLField()
     description = models.TextField(null = True, blank = True)
+    
+    date_created = models.DateTimeField(auto_now_add = True)
+    date_modified = models.DateTimeField(auto_now = True)
     
     def __unicode__(self):
         return str(self.course_night) + ": Clip " + str(self.clip_num)
