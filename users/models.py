@@ -40,8 +40,11 @@ class UserProfile(models.Model):
     background_field = models.CharField(max_length = 200)
     desire = models.CharField(max_length = 10000, blank = True)
     
-    current_courses = models.ManyToManyField(Course, related_name = "current_users")
-    finished_courses = models.ManyToManyField(Course, related_name = "finished_users")
+    current_courses = models.ManyToManyField(Course, related_name = "current_users", null = True, blank = True)
+    finished_courses = models.ManyToManyField(Course, related_name = "finished_users", null = True, blank = True)
+    
+    def __unicode__(self):
+        return str(self.user) + "'s Profile"
 
 from django.db.models.signals import post_save
 

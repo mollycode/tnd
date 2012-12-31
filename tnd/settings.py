@@ -161,3 +161,16 @@ LOGGING = {
 AUTH_PROFILE_MODULE = 'users.UserProfile'
 
 LOGIN_URL = '/users/login/'
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_HOST_USER = '3ndteam@gmail.com'
+# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+EMAIL_HOST_PASSWORD = 'MungChiang'
+
+EMAIL_PORT = "587"
+
+EMAIL_SUBJECT_PREFIX = "[3ND] "
+
+EMAIL_USE_TLS = True
