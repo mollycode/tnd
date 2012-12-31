@@ -8,6 +8,7 @@ urlpatterns = patterns('',
     url(r'^$', 'main.views.home'),
     url(r'^personalpage/$', 'main.views.personalpage'),
     url(r'^about/$', 'main.views.about'),
+    url(r'^team/$', 'main.views.team'),
 
     url(r'^courselist/$', 'main.views.courselist'),
     url(r'^wiki/$', 'main.views.wiki'),
