@@ -24,6 +24,9 @@ class Course(models.Model):
     title = models.CharField(max_length = 200)
     description = models.TextField(null = True, blank = True)
     image = models.ImageField(upload_to = get_course_image_path, null = True, blank = True)
+    available = models.BooleanField()
+    release_date = models.DateField()
+    
     
     def __unicode__(self):
         return self.title

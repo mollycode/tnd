@@ -62,3 +62,13 @@ def get_or_create_user_profile(request):
     except UserProfile.DoesNotExist:
         profile = UserProfile.objects.create(user = user)
     return profile
+
+"""
+class UserTakingCourse(models.Model):
+    user = models.ForeignKey(User)
+    course = models.ForeignKey(Course)
+    date_added = models.DateTimeField()
+    curr_night_num = models.IntegerField()
+    curr_clip_num = models.IntegerField()
+    date_completed = models.DateTimeField()
+"""
