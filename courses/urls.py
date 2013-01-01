@@ -1,17 +1,13 @@
 from django.conf.urls import patterns, include, url
 
-urlpatterns = patterns('courses.views',
+urlpatterns = patterns('',
 
-    url(r'^(?P<course_id>\d+)/(?P<night_num>\d+)/(?P<clip_num>\d+)/$', 'course'),
-    url(r'^(?P<course_id>\d+)/info/$', 'info'),
-    url(r'^(?P<course_id>\d+)/discussion/$', 'discussion'),
+    url(r'^(?P<course_id>\d+)/(?P<night>\d+)/$', 'courses.views.course'),
     
     # temporary course pages
     
-    url(r'^cambroncourseinfo/$', 'cambron'),
-    url(r'^ciofficourseinfo/$', 'cioffi'),
-    url(r'^foxcourseinfo/$', 'fox'),
-    url(r'^glasscourseinfo/$', 'glass'),
-    
-    url(r'^$', 'get_out'),
+    url(r'^cambroncourseinfo/$', 'courses.views.cambron'),
+    url(r'^ciofficourseinfo/$', 'courses.views.cioffi'),
+    url(r'^foxcourseinfo/$', 'courses.views.fox'),
+    url(r'^glasscourseinfo/$', 'courses.views.glass'),
 )

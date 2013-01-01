@@ -8,16 +8,14 @@ urlpatterns = patterns('',
     url(r'^$', 'main.views.home'),
     url(r'^personalpage/$', 'main.views.personalpage'),
     url(r'^about/$', 'main.views.about'),
-    url(r'^team/$', 'main.views.team'),
 
     url(r'^courselist/$', 'main.views.courselist'),
     url(r'^wiki/$', 'main.views.wiki'),
     
     url(r'^users/', include('users.urls')),
-    url(r'^course/', include('courses.urls')),
-    url(r'^quiz/', include('quizzes.urls')),
-    url(r'^log/', include('logger.urls')),
     
+    url(r'^course/', include('courses.urls')),
+
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

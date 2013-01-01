@@ -6,10 +6,8 @@ from django.contrib.auth import authenticate, login as auth_login, logout as aut
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
-from users.forms import UserProfileForm, UserCreationForm
-from users.models import get_or_create_user_profile, UserProfile
-
-from courses.models import Course
+from forms import UserProfileForm, UserCreationForm
+from models import get_or_create_user_profile
 
 import sys
 
@@ -62,6 +60,30 @@ def profile(request):
     
     return render(request, "profile.html", template_dict)
 
+"""
+def profile(request):
+    if request.POST:
+        if 'password1' in request.POST:
+            password = request.POST['password1']
+        else:
+            password = request.POST['password']
+        username = request.POST['username']
+
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                auth_login(request, user)
+                # request.session["user"] = user
+                return render(request, "profile.html", {"username": username})
+            else:
+                print "not an active user"
+                return render(request, "login.html")
+        else:
+            print "user is none"
+    print "skipped it all"
+    return render(request, "login.html")
+    """
+
 def register(request):
     if request.POST:
         creation_form = UserCreationForm(request.POST)
@@ -87,69 +109,6 @@ def register(request):
                                              "profile_form": profile_form
                                              })
 
-@login_required
-def currentlessons(request):
-    user_profile = UserProfile.objects.get(user = request.user)
-    courses = user_profile.current_courses.all()
-    
-    td = {}
-    td['courses'] = courses
-    
-    return render(request, "currentlessons.html", td)
-
-@login_required
-def completedcourses(request):
-    return render(request, "completedcourses.html")
-
-@login_required
-def addcourse(request, course_id):
-    course_id = int(course_id)
-    
-    if request.GET:
-        if request.GET['next']:
-            next = request.GET['next']
-            
-    else:
-        next = '/course/%d/info/' % course_id
-    
-    user_profile = UserProfile.objects.get(user = request.user)
-    course = Course.objects.get(pk = course_id)
-    user_profile.current_courses.add(course)
-    user_profile.save()
-    
-    return redirect(next)
-
-def finishcourse(request, course_id):
-    return redirector(request)
-
 def logout(request):
     auth_logout(request)
     return redirect("/")
-
-def redirector(request):
-    return redirect("users.views.profile")
-
-
-"""
-def profile(request):
-    if request.POST:
-        if 'password1' in request.POST:
-            password = request.POST['password1']
-        else:
-            password = request.POST['password']
-        username = request.POST['username']
-
-        user = authenticate(username=username, password=password)
-        if user is not None:
-            if user.is_active:
-                auth_login(request, user)
-                # request.session["user"] = user
-                return render(request, "profile.html", {"username": username})
-            else:
-                print "not an active user"
-                return render(request, "login.html")
-        else:
-            print "user is none"
-    print "skipped it all"
-    return render(request, "login.html")
-    """

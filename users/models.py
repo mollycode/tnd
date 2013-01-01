@@ -1,9 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-from courses.models import Course
-
-from users.extras import CountryField
+from extras import CountryField
 
 class UserProfile(models.Model):
     # This field is required.
@@ -39,15 +37,6 @@ class UserProfile(models.Model):
     education_level = models.CharField(max_length = 200, choices = EDUCATION_CHOICES)
     background_field = models.CharField(max_length = 200)
     desire = models.CharField(max_length = 10000, blank = True)
-    
-    current_courses = models.ManyToManyField(Course, related_name = "current_users", null = True, blank = True)
-    finished_courses = models.ManyToManyField(Course, related_name = "finished_users", null = True, blank = True)
-    
-    date_created = models.DateTimeField(auto_now_add = True)
-    date_modified = models.DateTimeField(auto_now = True)
-    
-    def __unicode__(self):
-        return str(self.user) + "'s Profile"
 
 from django.db.models.signals import post_save
 
@@ -65,21 +54,3 @@ def get_or_create_user_profile(request):
     except UserProfile.DoesNotExist:
         profile = UserProfile.objects.create(user = user)
     return profile
-"""
-class Enrollment(models.Model):
-    user = models.ForeignKey(User)
-    course = models.ForeignKey(Course)
-    curr_night_num = models.IntegerField(null = True, blank = True)
-    curr_clip_num = models.IntegerField(null = True, blank = True)
-
-    gold_medal = models.BooleanField()
-    silver_medal = models.BooleanField()
-    
-    date_created = models.DateTimeField(auto_now_add = True)
-    date_modified = models.DateTimeField(auto_now = True)
-    date_completed = models.DateTimeField(null = True, blank = True)
-    
-    def __unicode__(self):
-        return str(self.user) + " taking " + str(self.course)
-        """
-    

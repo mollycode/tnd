@@ -1,37 +1,18 @@
 {% extends "base.html" %}
-{% load filters %}
 
 {% block content %}
         <div id="coursecontent">
         	<div id="coursenighttitle">
             	<div class="search"></div><br />
-            	<a href="/course/{{ course_id }}/info/"><div class="menu">Course Info</div></a> <!--link to this current page -->
-            	
-            	{% mkrange 1 4 as nights %}
-            	
-            	<!--link to night 1; if course hasn't been added yet, have a 
-            		pop-up box that prompts if they want to add course to 
-            		their personal page-->
-            	{% for i in nights %}
-            		<a href="/course/{{ course_id }}/{{ i }}/1/">
-            		{% if night_num == i %}
-            			<div class="menuactive">
-            		{% else %}
-            			<div class="menu">
-            		{% endif %}
-					Night {{ i }}</div></a>
-            	{% endfor %}
-                
+            	<a href="#"><div class="menu">Course Info</div></a> <!--link to this current page -->
+            	<a href="#"><div class="menuactive">Night 1</div></a> <!--link to night 1; if course hasn't been added yet, have a pop-up box that prompts if they want to add course to their personal page-->
+                <a href="#"><div class="menu">Night 2</div></a> <!--link to night 2; same logic as above-->
+                <a href="#"><div class="menu">Night 3</div></a> <!--link to night 3; same logic as above-->
                 <a href="#"><div class="menu">Discussion</div></a> <!--link to discussion for this course only; same logic as above-->
             </div>
             <div id="coursemain">
-            	<h2>{% if night.title == "" %}
-            			{{ course.title }}
-            		{% else %}
-            			{{ night.title}}
-            		{% endif %}
-            	</h2>
-                <h3>{{ instructor.name }}</h3>
+            	<h2>Title</h2>
+                <h3>Instructor</h3>
                 <div id="coursevideo">
                 	<!--imbed video here-->
                     <div id="ytvideo"></div>

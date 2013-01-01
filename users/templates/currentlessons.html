@@ -6,14 +6,13 @@ Welcome, {{ user.username }}!
             <div id="personalcurrent">
                 <div id="profiletitle">
                 		<div class="search"></div><br />
-                        <a href="/users/profile/"><div class="menu">My Profile</div></a>
-                        <a href="/users/currentlessons/"><div class="menuactive">Lessons in Progress</div></a>
-                        <a href="/users/completedcourses/"><div class="menu">Completed Courses</div></a>
+                        <a href="/profile/"><div class="menu">My Profile</div></a>
+                        <a href="/currentlessons/"><div class="menuactive">Lessons in Progress</div></a>
+                        <a href="/completedcourses/"><div class="menu">Completed Courses</div></a>
                 </div>
                     
             	<h2>Currently Watching</h2>
                 
-                {% for course in courses %}
                 <!--code for each block-->
                 <div class="courseblock">
                 	<div class="image">
@@ -47,14 +46,13 @@ Welcome, {{ user.username }}!
                                 });
                             </script>
                         
-                        <p><!-- {{ course.affiliation }} --> </p>
+                        <p>{{ course.affiliation }}</p>
                     </div>
                     <div class="date">
-                    	<p><!-- {{ course.startdate }} --> </p>
+                    	<p>{{ course.startdate }}</p>
                     </div>
                 </div>
                 <!--end block-->
-                {% endfor %}
                 
                 <h2>Courses Coming Soon!</h2>
                 <table id="courseTable" class="tablesorter">
@@ -68,9 +66,9 @@ Welcome, {{ user.username }}!
                     <tbody>
                     	<!--code for each row -->
                         <tr>
-                            <td><!-- <img src="{{ STATIC_URL }}images/block/{{ course.number }}.png"  width="75px" /><br /><a href="/course/{{ course.number }}info/">{{ course.title }}</a> --></td>
-                            <td><!--{{ course.instructor }} ({{ course.affiliation }}) --></td>
-                            <td><!-- {{ course.startdate }} --></td>
+                            <td><img src="{{ STATIC_URL }}images/block/{{ course.number }}.png"  width="75px" /><br /><a href="/course/{{ course.number ))info/">{{ course.title }}</a></td>
+                            <td>{{ course.instructor }} ({{ course.affiliation }})</td>
+                            <td>{{ course.startdate }}</td>
                         </tr>
                         <!-- end row -->
                     </tbody>
