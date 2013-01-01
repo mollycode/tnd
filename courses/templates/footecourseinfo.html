@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <div id="courseinfocontent">
+        	<div id="coursenighttitle"><!--this section/format is same for all the other course landing pages; not sure if there's a way to just have static content for the course description, instructor, schedule, etc. or not?-->
+            	<div class="search"></div><br />
+                <a href="#"><div class="menuactive1">Course Info</div></a> <!--link to this current page -->
+            	<a href="#"><div class="menu">Night 1</div></a> <!--link to night 1; if course hasn't been added yet, have a pop-up box that prompts if they want to add course to their personal page-->
+                <a href="#"><div class="menu">Night 2</div></a> <!--link to night 2; same logic as above-->
+                <a href="#"><div class="menu">Night 3</div></a> <!--link to night 3; same logic as above-->
+                <a href="#"><div class="menu">Discussion</div></a> <!--link to discussion for this course only; same logic as above-->
+            </div>
+            <div id="courseinfomain">
+                  
+                <div id="courseinfodescription">
+                	<h1>Barry Foote: How Do We Watch Baseball Like a Pro?</h1>
+                    <div class="left">
+                    	<p>In our Three Nights and Done course, we will explore the world of baseball and how a pro watches and, even more importantly, analyzes a baseball game. We will start with how a game is initiated all the way to the last out of the game. </p>
+						<p>We will analyze virtually ever position on the field, paying close attention to the middle of the diamond. The pitcher, catcher, shortstop and centerfielder will be discussed with the desired result a better understanding of their importance in the overall development of each game. We will analyze the offense and defense and how the managers influence their team's deployment of both. At the end of our three nights together, you will never watch a baseball game the same way again.</p>
+                    </div>
+                    <div class="right">
+                    	<img src="{{ STATIC_URL }}images/blocks/foote.png" width="360px" height="240px"/>
+                    </div>
+                </div>
+                <div class="course">
+                	<h1>Course Schedule</h1>
+                    <h2><a href="#">Night 1</a></h2>
+                    <p></p>
+                    <h2><a href="#">Night 2</a></h2>
+                    <p></p>
+                    <h2><a href="#">Night 3</a></h2>
+                    <p></p><br /><br />
+                </div>
+                
+                <div class="author">
+                <h1>About the Instructor(s)</h1>
+                <p></p>
+                <img src="{{ STATIC_URL }}images/author/glass.jpg" height="210px" />
+                <p><span style="font-size: 24px">Barry Foote</span>, founder of Streamer Video LLC, is the company's Chief Executive Officer and a Director. Mr. Foote has co-founded several other technology start- ups including F2 Technologies, LLC, a firm specializing in unique wireless communications capabilities, and Coastal Carolina Fusion Technologies, a company performing Chrome-Fusion electro-deposition solutions. From 2002 until 2005 Mr. Foote was President of NorthStar Energy Group, whose primary business was development of oil and gas assets in Alaska. He also served on the executive board of the National Wireless Network from 1994 to 1999, where he was in charge of spectrum usage searches for the New York, Washington, DC, and Dallas, Texas licenses.</p>
+				<p>Mr. Foote spent 24 years in professional baseball as a player, coach and manager with several teams, including the Chicago Cubs and New York Yankees. During his time as a Major League player and coach, Mr. Foote found time to form Tri-State Homes, a construction company that built over 200 single family residences in the Raleigh-Durham area of North Carolina. Mr. Foote also helped found many Minor League baseball franchises including the vastly successful Carolina Mudcats of the AA southern League. He garnered three "Manager of the Year" awards in six seasons as a Minor League manager. During Mr. Foote's twenty four year baseball career, he managed, coached or played with twenty future Hall of Fame players and managers. This experience has given him a unique insight into all aspects of baseball and the overall experience of enjoying the game of baseball. His vast business experience, entrepreneurial spirit, and winning tradition identified him as the perfect manager to lead his various start- up ventures. </p>
+                </div>
+               
+            </div>
+            
+            
+        </div>
+        
+  </div>
+{% endblock %}
