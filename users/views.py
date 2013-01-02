@@ -63,6 +63,9 @@ def profile(request):
     return render(request, "profile.html", template_dict)
 
 def register(request):
+    if request.user.is_authenticated():
+        return redirect("users.views.profile")
+    
     if request.POST:
         creation_form = UserCreationForm(request.POST)
         profile_form = UserProfileForm(request.POST)

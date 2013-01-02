@@ -16,7 +16,15 @@
             <br /><br />
             <p style="text-align: center;"><img src="{{ STATIC_URL }}images/flowchart.png" /></p>
             <br /><br />
-            <p style="text-align: right;"><a href="/users/register/" class="button blue">Start Now!</a></p><br /><br />
+            <p style="text-align: right;">
+            	<a href="
+            	{% if user.is_authenticated %}
+            	/courselist/
+            	{% else %}
+            	/users/register/
+            	{% endif %}
+            	" class="button blue">
+            	Start Now!</a></p><br /><br />
             <div id="indexbottom">
             	<h4>Hot Courses</h4>
                 <div class="left"><a href="/course/cambroncourseinfo/"><img src="{{ STATIC_URL }}images/blocks/cambron.png" width="360px" height="240px" /></a></div>
