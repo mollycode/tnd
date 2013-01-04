@@ -23,8 +23,18 @@ def course(request, course_id, night_num, clip_num):
     night = Night.objects.get(course = course_id, night_num = night_num)
     td['night'] = night
     
-    # clip = Clip.objects.get(course_night = night.pk, clip_num = clip_num)
-    # td['clip'] = clip
+    try:
+        clip = Clip.objects.get(course_night = night.pk, clip_num = clip_num)
+        td['clip'] = clip
+        
+        other_clips = Clip.objects.filter(course_night = night.pk)
+        youtube_ids = []
+        for other_clip in other_clips:
+            # extract 11 char video id
+            youtube_ids.append(other_clip.youtube_video[29:29+11])
+        td['youtube_ids'] = youtube_ids
+    except DoesNotExist as e:
+        print "clips don't exist"
 
     return render(request, "course.html", td)
 
@@ -43,6 +53,9 @@ def info(request, course_id):
     td['instructor'] = Instructor.objects.get(pk = course.instructor.pk)
 
     return render(request, "info.html", td)
+
+def bare_course(request, course_id):
+    return redirect("/course/%d/info/" % int(course_id))
 
 def discussion(request):
     return redirect("main.views.home")

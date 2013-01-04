@@ -33,14 +33,13 @@
             	</h2>
                 <h3>{{ instructor.name }}</h3>
                 <div id="coursevideo">
-                	<!--imbed video here-->
+                	<!-- <iframe width="960" height="720" src="{{ clip.youtube_video }}" frameborder="0" allowfullscreen></iframe> -->
                     <div id="ytvideo"></div>
                     <div id="list">
                         <ul class="thumbnails">
-                            <li><a href="http://www.youtube.com/watch?v=oO45qeAnPAU"></a></li>
-                            <li><a href="http://www.youtube.com/watch?v=aImsn616lRU"></a></li>
-                            <li><a href="http://www.youtube.com/watch?v=oO45qeAnPAU"></a></li>
-                            <li><a href="http://www.youtube.com/watch?v=aImsn616lRU"></a></li>
+                        	{% for youtube_id in youtube_ids %}
+                            <li><a href="http://www.youtube.com/watch?v={{ youtube_id }}"></a></li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>

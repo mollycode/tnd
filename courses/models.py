@@ -35,7 +35,7 @@ class Course(models.Model):
     date_modified = models.DateTimeField(auto_now = True)
     
     def __unicode__(self):
-        return self.title
+        return self.title + " - " + str(self.instructor)
 
 class Night(models.Model):
     course = models.ForeignKey(Course)
