@@ -61,4 +61,7 @@ class Clip(models.Model):
     
     def __unicode__(self):
         return str(self.course_night) + ": Clip " + str(self.clip_num)
+    
+    def get_youtube_id(self):
+        return self.youtube_video[29:29+11]
 

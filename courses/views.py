@@ -1,6 +1,7 @@
 # Create your views here.
 
 from django.shortcuts import render, redirect
+from django.core.exceptions import ObjectDoesNotExist
 
 from courses.models import Instructor, Course, Night, Clip
 
@@ -20,10 +21,10 @@ def course(request, course_id, night_num, clip_num):
     instructor = Instructor.objects.get(pk = course.instructor.pk)
     td['instructor'] = instructor
 
-    night = Night.objects.get(course = course_id, night_num = night_num)
-    td['night'] = night
-    
     try:
+        night = Night.objects.get(course = course_id, night_num = night_num)
+        td['night'] = night
+        
         clip = Clip.objects.get(course_night = night.pk, clip_num = clip_num)
         td['clip'] = clip
         
@@ -31,10 +32,11 @@ def course(request, course_id, night_num, clip_num):
         youtube_ids = []
         for other_clip in other_clips:
             # extract 11 char video id
-            youtube_ids.append(other_clip.youtube_video[29:29+11])
+            youtube_ids.append(other_clip.get_youtube_id())
         td['youtube_ids'] = youtube_ids
-    except DoesNotExist as e:
-        print "clips don't exist"
+        
+    except ObjectDoesNotExist as e:
+        print "No nights, or clips don't exist\n"
 
     return render(request, "course.html", td)
 
@@ -47,9 +49,14 @@ def info(request, course_id):
     course = Course.objects.get(pk = course_id)
     
     td['course'] = course
-    td['night_1'] = Night.objects.get(course = course_id, night_num = 1)
-    td['night_2'] = Night.objects.get(course = course_id, night_num = 2)
-    td['night_3'] = Night.objects.get(course = course_id, night_num = 3)
+    
+    try:
+        td['night_1'] = Night.objects.get(course = course_id, night_num = 1)
+        td['night_2'] = Night.objects.get(course = course_id, night_num = 2)
+        td['night_3'] = Night.objects.get(course = course_id, night_num = 3)
+    except ObjectDoesNotExist as e:
+        print "No nights available yet"
+        
     td['instructor'] = Instructor.objects.get(pk = course.instructor.pk)
 
     return render(request, "info.html", td)
