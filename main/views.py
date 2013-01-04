@@ -16,7 +16,9 @@ def team(request):
     return render(request, "team.html")
 
 def courselist(request):
-    return render(request, "courselist.html")
+    td = {}
+    td['is_courselist_page'] = True
+    return render(request, "courselist.html", td)
 
 def wiki(request):
     return redirect("main.views.home")

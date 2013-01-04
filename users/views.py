@@ -36,7 +36,7 @@ def login(request):
 
 @login_required
 def profile(request):
-    template_dict = {}
+    td = {}
     
     form = UserProfileForm()
     
@@ -56,11 +56,12 @@ def profile(request):
             form = UserProfileForm(instance = profile)
         except:
             print sys.exc_info()[0]
-            template_dict["creating_profile"] = True
+            td["creating_profile"] = True
             
-    template_dict["form"] = form
+    td["form"] = form
+    td["is_profile_page"] = True
     
-    return render(request, "profile.html", template_dict)
+    return render(request, "profile.html", td)
 
 def register(request):
     if request.user.is_authenticated():
@@ -96,7 +97,8 @@ def currentlessons(request):
     courses = user_profile.current_courses.all()
     
     td = {}
-    td['courses'] = courses
+    td["courses"] = courses
+    td["is_profile_page"] = True
     
     return render(request, "currentlessons.html", td)
 
@@ -109,11 +111,11 @@ def addcourse(request, course_id):
     course_id = int(course_id)
     
     if request.GET:
-        if request.GET['next']:
-            next = request.GET['next']
+        if request.GET["next"]:
+            next = request.GET["next"]
             
     else:
-        next = '/course/%d/info/' % course_id
+        next = "/course/%d/info/" % course_id
     
     user_profile = UserProfile.objects.get(user = request.user)
     course = Course.objects.get(pk = course_id)
