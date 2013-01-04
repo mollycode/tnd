@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     url(r'^about/$', 'main.views.about'),
     url(r'^team/$', 'main.views.team'),
     url(r'^contact/$', 'main.views.team'),
+    url(r'^register/$', 'main.views.register'),
 
     url(r'^courselist/$', 'main.views.courselist'),
     url(r'^wiki/$', 'main.views.wiki'),
