@@ -220,6 +220,7 @@ body {
 
 #indexbottom {
 	border-top: 1px solid #a4a4a4;
+	height: 650px;
 }
 
 #indexbottom .left {
@@ -257,13 +258,21 @@ body {
 	text-align: left;
 }
 
-#indexbottom h4 {
+#indexcontent h4 {
 	color: #353535;
 	font-family: 'OpenSans'; 
 	font-size: 20px; 
 	font-weight: normal;
 	padding: 0;
 	margin: 20px 0 20px 0;
+}
+
+#slideshow1, #slideshow2, #slideshow3, #slideshow4 {
+	height: 400px;
+}
+
+.hidden {
+	display: none;
 }
 
 /*courselist page*/
