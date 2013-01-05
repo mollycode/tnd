@@ -220,7 +220,7 @@ body {
 
 #indexbottom {
 	border-top: 1px solid #a4a4a4;
-	height: 650px;
+	height: 580px;
 }
 
 #indexbottom .left {
@@ -268,7 +268,7 @@ body {
 }
 
 #slideshow1, #slideshow2, #slideshow3, #slideshow4 {
-	height: 400px;
+	height: 380px;
 }
 
 .hidden {
@@ -1012,8 +1012,8 @@ body {
 	text-align: center;
 	text-decoration: none;
 	font-family: 'OpenSansLight';
-	font: 14px;
-	padding: 2px 40px 2px 40px;
+	font-size: 12px;
+	padding: 2px 30px 2px 30px;
 	text-shadow: 0 1px 1px rgba(0,0,0,.3);
 	-webkit-border-radius: 5px; 
 	-moz-border-radius: 5px;
