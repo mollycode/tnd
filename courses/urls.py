@@ -7,6 +7,8 @@ urlpatterns = patterns('courses.views',
     url(r'^(?P<course_id>\d+)/info/$', 'info'),
     url(r'^(?P<course_id>\d+)/discussion/$', 'discussion'),
     
+    url(r'^courselist/$', 'courselist'),
+    
     # temporary course pages
     
     url(r'^cambroncourseinfo/$', 'cambron'),

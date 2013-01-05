@@ -1,0 +1,49 @@
+{% extends "base.html" %}            
+                
+{% block content %}
+<div id="courselistcontent">
+	<div class="current">
+    </div>
+    
+    <div class="comingsoon">
+    	<h1>Courses Coming Soon!</h1>
+    	<table id="courseTable" class="tablesorter">
+        <thead>
+        	<tr>
+            	<th>Course Title</th>
+                <th>Instructor</th>
+                <th>Start Date</th>
+            </tr>
+        </thead>
+        <tbody>
+        	{% for course in courses %}
+            <tr>
+            	<td>
+            		{% if course.available %}
+            			<a href="{{ course.get_info_url }}">{{ course.title }}</a>
+            		{% else %}
+            			{{ course.title }}
+            		{% endif %}
+            		</td>
+                <td>{{ course.instructor }} ({{ course.instructor.title }})</td>
+                <td data-date="{{ course.release_date|date:"m-d-Y"}}">
+                	{% if course.release_string %}
+                		{{ course.release_string }}
+                	{% else %}
+                		{{ course.release_date }}
+                	{% endif %}
+                </td>
+                <td>
+                	{% if course.available %}
+                		<a class="addbutton blue" href="/users/addcourse/{{ course.pk }}?next=/users/currentlessons/">Add Course</a>
+                	{% else %}
+                		<a class="addbutton blue" href="#">Coming Soon</a>
+                	{% endif %}
+                	</td>
+            </tr>
+        	{% endfor %}
+        </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
