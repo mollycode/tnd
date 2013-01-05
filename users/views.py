@@ -124,6 +124,26 @@ def addcourse(request, course_id):
     
     return redirect(next)
 
+@login_required
+def removecourse(request, course_id):
+    course_id = int(course_id)
+    
+    if request.GET:
+        if request.GET["next"]:
+            next = request.GET["next"]
+            
+    else:
+        next = "/users/currentlessons/"
+    
+    user_profile = UserProfile.objects.get(user = request.user)
+    course = Course.objects.get(pk = course_id)
+    # try:
+    user_profile.current_courses.remove(course)
+    # except ObjectDoesNotExist as e:
+    user_profile.save()
+    
+    return redirect(next)
+
 def finishcourse(request, course_id):
     return redirector(request)
 
