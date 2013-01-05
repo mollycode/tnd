@@ -15,7 +15,7 @@ $(document).ready(function() {
 	
 		(function cycle() { 
 			divs.eq(i).effect("slide")
-					  .delay(8000)
+					  .delay(6000)
 					  .show(0)
 					  .hide(0, cycle)
 					  
