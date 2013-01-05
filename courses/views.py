@@ -64,6 +64,15 @@ def info(request, course_id):
 def bare_course(request, course_id):
     return redirect("/course/%d/info/" % int(course_id))
 
+def courselist(request):
+    td = {}
+    
+    courses = Course.objects.all()
+    
+    td["courses"] = courses
+    
+    return render(request, "courselist_from_models.html", td)
+
 def discussion(request):
     return redirect("main.views.home")
 

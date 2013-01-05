@@ -36,6 +36,9 @@ class Course(models.Model):
     
     def __unicode__(self):
         return self.title + " - " + str(self.instructor)
+    
+    def get_info_url(self):
+        return "/course/%d/info/" % self.pk
 
 class Night(models.Model):
     course = models.ForeignKey(Course)
