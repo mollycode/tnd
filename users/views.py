@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
 from users.forms import UserProfileForm, UserCreationForm
+from users.forms import UserEmailForm
 from users.models import get_or_create_user_profile, UserProfile
 
 from courses.models import Course
@@ -38,27 +39,32 @@ def login(request):
 def profile(request):
     td = {}
     
-    form = UserProfileForm()
+    profile_form = UserProfileForm()
+    email_form = UserEmailForm(instance = request.user)
     
     if request.POST:
         try:
-            form = UserProfileForm(request.POST, instance = request.user.get_profile())
+            profile_form = UserProfileForm(request.POST, instance = request.user.get_profile())
+            email_form = UserEmailForm(request.POST, instance = request.user)
         except:
-            form = UserProfileForm(request.POST)
-        if form.is_valid():
-            user_profile = form.save(commit = False)
+            profile_form = UserProfileForm(request.POST)
+            email_form = UserEmailForm(request.POST, instance = request.user)
+        
+        if profile_form.is_valid():
+            user_profile = profile_form.save(commit = False)
             user_profile.user = request.user
             user_profile.save()
             
     else:
         try:
             profile = get_or_create_user_profile(request)
-            form = UserProfileForm(instance = profile)
+            profile_form = UserProfileForm(instance = profile)
         except:
             print sys.exc_info()[0]
             td["creating_profile"] = True
             
-    td["form"] = form
+    td["profile_form"] = profile_form
+    td["email_form"] = email_form
     td["is_profile_page"] = True
     
     return render(request, "profile.html", td)
@@ -104,7 +110,10 @@ def currentlessons(request):
 
 @login_required
 def completedcourses(request):
-    return render(request, "completedcourses.html")
+    td = {}
+    td["courses"] = []
+    
+    return render(request, "completedcourses.html", td)
 
 @login_required
 def addcourse(request, course_id):

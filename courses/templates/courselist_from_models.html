@@ -37,7 +37,8 @@
                 	{% if course.available %}
                 		<a class="addbutton blue" href="/users/addcourse/{{ course.pk }}?next=/users/currentlessons/">Add Course</a>
                 	{% else %}
-                		<a class="addbutton blue" href="#">Coming Soon</a>
+                		<a class="addbutton blue" href="/users/addcourse/{{ course.pk }}?next=/users/currentlessons/">Add Course</a>
+                		<!-- <a class="addbutton blue" href="#">Coming Soon</a> -->
                 	{% endif %}
                 	</td>
             </tr>

@@ -10,17 +10,25 @@ Welcome, {{ user.username }}!
                 <a href="/users/completedcourses/"><div class="menuactive">Completed Courses</div></a>
         </div>              
         
+        {% for course in courses %}
         <!--begin block-->
         <div class="doneblock">
-            <div class="medal"><img src="{{ STATIC_URL }}images/goldmedal.png" /></div> <!--or img src="{{ STATIC_URL }}images/silvermedal.png" /> -->
+            <div class="medal">
+            	{% if course.got_gold_medal %}
+            	<img src="{{ STATIC_URL }}images/goldmedal.png" />
+            	{% elif got_silver_medal %}
+            	<img src="{{ STATIC_URL }}images/silvermedal.png" />
+            	{% endif %}
+            </div>
             <div class="image"><img src="images/blocks/{{ course.number }}.png" width="100%" height="100%" /></div>
             <p class="title">{{ course.title }}</p>
-            <p class="instructor">{{ course.instructor }} ({{ course.affiliation }})</p>
-            <p class="date">{{ course.startdate }}</p>
+            <p class="instructor">{{ course.instructor }} ({{ course.instructor.affiliation }})</p>
+            <p class="date">{{ course.release_date }}</p>
             <p class="certificate"><a href="#">View Certificate</a></p>
         </div>
-        <!--endblock -->   
-        
+        <!--endblock -->
+        {% endfor %}
+        	
 	</div>
 
 {% endblock %}

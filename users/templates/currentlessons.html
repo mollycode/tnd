@@ -5,7 +5,7 @@ Welcome, {{ user.username }}!
 
             <div id="personalcurrent">
                 <div id="profiletitle">
-                		<div class="search"></div><br />
+                		<div class="search"></div>
                         <a href="/users/profile/"><div class="menu">My Profile</div></a>
                         <a href="/users/currentlessons/"><div class="menuactive">Lessons in Progress</div></a>
                         <a href="/users/completedcourses/"><div class="menu">Completed Courses</div></a>
@@ -50,7 +50,7 @@ Welcome, {{ user.username }}!
                         <p><a href="/users/removecourse/{{ course.pk }}/">Remove</a></p>
                     </div>
                     <div class="date">
-                    	<p><!-- {{ course.startdate }} --> </p>
+                    	<p>{{ course.release_date }}</p>
                     </div>
                 </div>
                 <!--end block-->
