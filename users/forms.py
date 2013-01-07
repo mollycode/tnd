@@ -4,13 +4,21 @@ from django.forms.widgets import TextInput
 
 from models import UserProfile
 
+class UserRegistrationForm(ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ("first_name", "last_name", "age", "sex", "country", "education_level", "background_field")
+        widgets = {
+            "age": TextInput(attrs={'size':'1','maxlength':'3'}),
+        }
+
 class UserProfileForm(ModelForm):
     class Meta:
         model = UserProfile
         fields = ("first_name", "last_name", "age", "sex", "country", "education_level", "background_field", "desire")
         widgets = {
             "age": TextInput(attrs={'size':'1','maxlength':'3'}),
-            "desire": Textarea(attrs={'cols': 80, 'rows': 20, 'value': "What would you like from this site?"}),
+            "desire": Textarea(attrs={'cols': 80, 'rows': 20}),
         }
         
 from django import forms
@@ -23,7 +31,7 @@ class UserCreationForm(DjangoUserCreationForm):
 
     class Meta:
         model = User
-        fields = ("username", "email", "password1", "password2")
+        fields = ("username", "password1", "password2", "email")
 
     def save(self, commit=True):
         user = super(UserCreationForm, self).save(commit=False)

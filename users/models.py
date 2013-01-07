@@ -38,7 +38,7 @@ class UserProfile(models.Model):
     country = CountryField()
     education_level = models.CharField(max_length = 200, choices = EDUCATION_CHOICES)
     background_field = models.CharField(max_length = 200)
-    desire = models.CharField(max_length = 10000, blank = True)
+    desire = models.CharField(max_length = 10000, blank = True, verbose_name = "What are you interested in?")
     
     current_courses = models.ManyToManyField(Course, related_name = "current_users", null = True, blank = True)
     finished_courses = models.ManyToManyField(Course, related_name = "finished_users", null = True, blank = True)

@@ -6,8 +6,7 @@ from django.contrib.auth import authenticate, login as auth_login, logout as aut
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
-from users.forms import UserProfileForm, UserCreationForm
-from users.forms import UserEmailForm
+from users.forms import UserProfileForm, UserCreationForm, UserRegistrationForm, UserEmailForm
 from users.models import get_or_create_user_profile, UserProfile
 
 from courses.models import Course
@@ -75,7 +74,7 @@ def register(request):
     
     if request.POST:
         creation_form = UserCreationForm(request.POST)
-        profile_form = UserProfileForm(request.POST)
+        profile_form = UserRegistrationForm(request.POST)
         
         if creation_form.is_valid() and profile_form.is_valid():
             
@@ -91,7 +90,7 @@ def register(request):
             return login(request)
     else:
         creation_form = UserCreationForm()
-        profile_form = UserProfileForm()
+        profile_form = UserRegistrationForm()
     return render(request, "register.html", {
                                              "creation_form": creation_form,
                                              "profile_form": profile_form
