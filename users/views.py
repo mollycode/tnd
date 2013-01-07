@@ -49,10 +49,12 @@ def profile(request):
             profile_form = UserProfileForm(request.POST)
             email_form = UserEmailForm(request.POST, instance = request.user)
         
-        if profile_form.is_valid():
+        if profile_form.is_valid() and email_form.is_valid():
             user_profile = profile_form.save(commit = False)
             user_profile.user = request.user
             user_profile.save()
+            
+            email_form.save()
             
     else:
         try:
@@ -111,6 +113,7 @@ def currentlessons(request):
 def completedcourses(request):
     td = {}
     td["courses"] = []
+    td["is_profile_page"] = True
     
     return render(request, "completedcourses.html", td)
 
