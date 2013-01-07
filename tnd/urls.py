@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     url(r'^contact/$', 'main.views.team'),
     url(r'^register/$', 'main.views.register'),
 
+    # url(r'^courselist/$', 'main.views.courselist'),
     url(r'^courselist/$', 'courses.views.courselist'),
     url(r'^wiki/$', 'main.views.wiki'),
     
