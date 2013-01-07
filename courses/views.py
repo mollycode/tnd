@@ -67,9 +67,10 @@ def bare_course(request, course_id):
 def courselist(request):
     td = {}
     
-    courses = Course.objects.all()
+    courses = Course.objects.order_by("release_date")
     
     td["courses"] = courses
+    td["is_courselist_page"] = True
     
     return render(request, "courselist_from_models.html", td)
 
