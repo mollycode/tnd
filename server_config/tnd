@@ -4,7 +4,11 @@ server {
     root /home/edge/virtualenv/tnd/tnd;
 
     location /static/ {
-        root /home/edge/tnd;
+        root /home/edge/virtualenv/tnd/tnd;
+    }
+
+    location /admin_static/ {
+    	root /home/edge/virtualenv/tnd/tnd;
     }
 
     location / {
