@@ -15,10 +15,16 @@
                 <div id="courseinfodescription">
                 	<h1>{{ course.instructor.name }}: {{ course.title }}</h1>
                     <div class="left">
+                        Category: <Strong>{{ course.get_category_display }}</Strong><br><br>
+                    </div>    
+                    <div class="left">
                     	{{ course.description|safe }}
                     </div>
                     <div class="right">
                     	<img src="{{ course.image }}" width="360px" height="240px"/>
+                    </div>
+                    <div class="left">
+                        Course Rating: <strong>{{course.rating}} </strong><br><br>
                     </div>
                 </div>
                 <div class="course">

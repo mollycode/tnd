@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+Welcome, {{ user.username }}!
+
+<div>
+    <div id="profiletitle">
+    <!-- <div class="search"></div> -->
+ `      <a href="/users/profile/"><div class="menu">My Profile</div></a>
+        <a href="/users/currentlessons/"><div class="menu">Lessons in Progress</div></a>
+        <a href="/users/completedcourses/"><div class="menu">Completed Courses</div></a>
+        <a href="/users/recommended/"><div class="menuactive">Recommended Courses</div></a>
+    </div>
+    <div>
+        <h2>Recommended Courses:</h2>
+        {% for course in courses|slice:":3" %}
+        <strong>{{course}}</strong><br><br>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

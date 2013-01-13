@@ -30,6 +30,16 @@ class UserProfile(models.Model):
         (PHD, "PhD"),
     )
 
+    CATEGORIES = (
+        ('HI', 'history'),
+        ('MA', 'math'),
+        ('SC', 'science'),
+        ('LI', 'literature'),
+        ('TE', 'technology'),
+        ('FI', 'finance'),
+        ('MI', 'miscellaneous')
+    )
+
     # Other fields here
     first_name = models.CharField(max_length = 200)
     last_name = models.CharField(max_length = 200)
@@ -38,6 +48,8 @@ class UserProfile(models.Model):
     country = CountryField()
     education_level = models.CharField(max_length = 200, choices = EDUCATION_CHOICES)
     background_field = models.CharField(max_length = 200)
+    first_interest = models.CharField(max_length = 3, choices = CATEGORIES, verbose_name = "First favorite topic:")
+    second_interest = models.CharField(max_length = 3, choices = CATEGORIES, verbose_name = "Second favorite topic:")
     desire = models.CharField(max_length = 10000, blank = True, verbose_name = "What are you interested in?")
     
     current_courses = models.ManyToManyField(Course, related_name = "current_users", null = True, blank = True)

@@ -267,7 +267,7 @@ body {
 	margin: 20px 0 20px 0;
 }
 
-#slideshow1, #slideshow2, #slideshow3, #slideshow4 {
+#indexbottom #slideshow1, #indexbottom #slideshow2, #indexbottom #slideshow3, #indexbottom #slideshow4 {
 	height: 380px;
 }
 
@@ -935,6 +935,54 @@ body {
 	font-weight: normal;
 	line-height: 150%;
 }
+
+#differences {
+	border: 1px solid #FFF;
+	border-collapse: collapse;
+	font-family: 'OpenSansLight';
+	font-size: 14px;
+	font-weight: normal;
+}
+
+#differences th {
+	background-color: #000;
+	color: #FFF;
+	border: 1px solid #FFF;
+	border-bottom: 2px solid #FFF;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#differences td {
+	border: 1px solid #FFF;
+	text-align: center;
+	padding-right: 5px;
+}
+
+#differences tr {
+	color: #000;
+	border-bottom: 1px solid #FFF
+}
+
+#differences tr.odd td {
+	background-color: #CBCBCB;
+}
+
+#differences tr.even td {
+	background-color: #EBEBEB;
+}
+
+#differences tr td:nth-child(1) {
+	color: #05ABAC;
+	font-weight: bold;
+}
+
+#differences tr td:nth-child(8), #differences tr th:nth-child(8) {
+	color: #F06015;
+	font-weight: bold;
+}
+
 
 /*buttons*/
 .button, .button:visited {

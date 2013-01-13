@@ -91,5 +91,8 @@ def cioffi(request):
 def fox(request):
     return render(request, "foxcourseinfo.html")
 
+def foote(request):
+    return render(request, "footecourseinfo.html")
+
 def glass(request):
     return render(request, "glasscourseinfo.html")

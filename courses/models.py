@@ -23,13 +23,35 @@ class Instructor(models.Model):
         return self.name
 
 class Course(models.Model):
+
+    CATEGORIES = (
+        ('HI', 'history'),
+        ('MA', 'math'),
+        ('SC', 'science'),
+        ('LI', 'literature'),
+        ('TE', 'technology'),
+        ('FI', 'finance'),
+        ('MI', 'miscellaneous'),
+    )
+
+    RATINGS = (
+        (1, '1'),
+        (2, '2'),
+        (3, '3'),
+        (4, '4'),
+        (5, '5'),
+    )
+
     instructor = models.ForeignKey(Instructor)
     title = models.CharField(max_length = 200)
     description = models.TextField(null = True, blank = True)
     image = models.ImageField(upload_to = get_course_image_path, null = True, blank = True)
+    category = models.CharField(max_length=3, choices=CATEGORIES)
     available = models.BooleanField()
     release_date = models.DateField(null = True, blank = True)
     release_string = models.CharField(max_length = 100, null = True, blank = True)
+    rating = models.DecimalField(null = True, decimal_places = 2, max_digits = 3, choices=RATINGS)
+    num_rating = models.IntegerField(default= 0)
     
     date_created = models.DateTimeField(auto_now_add = True)
     date_modified = models.DateTimeField(auto_now = True)
@@ -39,6 +61,9 @@ class Course(models.Model):
     
     def get_info_url(self):
         return "/course/%d/info/" % self.pk
+
+    def __str__(self):
+        return self.title + " - " + str(self.instructor)
 
 class Night(models.Model):
     course = models.ForeignKey(Course)

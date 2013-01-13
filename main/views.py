@@ -12,6 +12,9 @@ def personalpage(request):
 def about(request):
     return render(request, "about.html")
 
+def difference(request):
+    return render(request, "difference.html")
+
 def team(request):
     return render(request, "team.html")
 

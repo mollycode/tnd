@@ -1,0 +1,551 @@
+[
+    {
+        "pk": 1,
+        "model": "quizzes.quiz",
+        "fields": {
+            "date_created": "2012-12-31T16:50:25.700Z",
+            "clip": 1,
+            "date_modified": "2012-12-31T16:50:25.700Z"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "quizzes.question",
+        "fields": {
+            "text": "1. The Internet is bound\ntogether by,",
+            "date_modified": "2012-12-31T16:52:25.508Z",
+            "date_created": "2012-12-31T16:52:25.507Z",
+            "quiz": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "a. the TCP protocol",
+            "date_modified": "2012-12-31T16:53:52.674Z",
+            "question": 1,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:53:52.674Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "b. the International Telecommunications Union (ITU)",
+            "date_modified": "2012-12-31T16:53:59.789Z",
+            "question": 1,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:53:59.789Z"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "c. the IP protocol",
+            "date_modified": "2012-12-31T16:54:04.593Z",
+            "question": 1,
+            "is_correct_answer": true,
+            "date_created": "2012-12-31T16:54:04.593Z"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "d. the World Wide Web (WWW)",
+            "date_modified": "2012-12-31T16:54:08.644Z",
+            "question": 1,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:54:08.643Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "quizzes.question",
+        "fields": {
+            "text": "2. The Internet is funded, operated and managed by,",
+            "date_modified": "2012-12-31T16:52:25.508Z",
+            "date_created": "2012-12-31T16:52:25.507Z",
+            "quiz": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "a. each government within their boundaries",
+            "date_modified": "2012-12-31T16:53:52.674Z",
+            "question": 2,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:53:52.674Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "b. the Internet Engineering Task Force (IETF)",
+            "date_modified": "2012-12-31T16:53:59.789Z",
+            "question": 2,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:53:59.789Z"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "c. a federation of independent operators",
+            "date_modified": "2012-12-31T16:54:04.593Z",
+            "question": 2,
+            "is_correct_answer": true,
+            "date_created": "2012-12-31T16:54:04.593Z"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "d. DARPA and the National Science Foundation (NSF)",
+            "date_modified": "2012-12-31T16:54:08.644Z",
+            "question": 2,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:54:08.643Z"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "quizzes.question",
+        "fields": {
+            "text": "3. The Internet Protocol (IP) provides which of the following?",
+            "date_modified": "2012-12-31T16:52:25.508Z",
+            "date_created": "2012-12-31T16:52:25.507Z",
+            "quiz": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "a. best effort delivery",
+            "date_modified": "2012-12-31T16:53:52.674Z",
+            "question": 3,
+            "is_correct_answer": true,
+            "date_created": "2012-12-31T16:53:52.674Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "b. delivery\nacknowledgement",
+            "date_modified": "2012-12-31T16:53:59.789Z",
+            "question": 3,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:53:59.789Z"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "c. prompt delivery of packets",
+            "date_modified": "2012-12-31T16:54:04.593Z",
+            "question": 3,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:54:04.593Z"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "d. sequential delivery of packets",
+            "date_modified": "2012-12-31T16:54:08.644Z",
+            "question": 3,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:54:08.643Z"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "quizzes.question",
+        "fields": {
+            "text": "4. Internet Service Providers (ISPs) connect to the Internet through,",
+            "date_modified": "2012-12-31T16:52:25.508Z",
+            "date_created": "2012-12-31T16:52:25.507Z",
+            "quiz": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "a. the confederation of ISP providers,",
+            "date_modified": "2012-12-31T16:53:52.674Z",
+            "question": 4,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:53:52.674Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "b. tier 2 networks",
+            "date_modified": "2012-12-31T16:53:59.789Z",
+            "question": 4,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:53:59.789Z"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "c. tier 1 networks",
+            "date_modified": "2012-12-31T16:54:04.593Z",
+            "question": 4,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:54:04.593Z"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "d. tier 2 and tier 1 networks",
+            "date_modified": "2012-12-31T16:54:08.644Z",
+            "question": 4,
+            "is_correct_answer": true,
+            "date_created": "2012-12-31T16:54:08.643Z"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "quizzes.question",
+        "fields": {
+            "text": "5. Which of the following networks always use IP for internal routing?Choose all that apply.",
+            "date_modified": "2012-12-31T16:52:25.508Z",
+            "date_created": "2012-12-31T16:52:25.507Z",
+            "quiz": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "a. ISPs",
+            "date_modified": "2012-12-31T16:53:52.674Z",
+            "question": 5,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:53:52.674Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "b. tier 2 networks",
+            "date_modified": "2012-12-31T16:53:59.789Z",
+            "question": 5,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:53:59.789Z"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "c. tier 1 networks",
+            "date_modified": "2012-12-31T16:54:04.593Z",
+            "question": 5,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:54:04.593Z"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "d. none of the above",
+            "date_modified": "2012-12-31T16:54:08.644Z",
+            "question": 5,
+            "is_correct_answer": true,
+            "date_created": "2012-12-31T16:54:08.643Z"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "quizzes.question",
+        "fields": {
+            "text": "6. Which of the following statements is not true?",
+            "date_modified": "2012-12-31T16:52:25.508Z",
+            "date_created": "2012-12-31T16:52:25.507Z",
+            "quiz": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "a. tier 1 networks connect with each other on a settlement free basis",
+            "date_modified": "2012-12-31T16:53:52.674Z",
+            "question": 6,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:53:52.674Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "b. tier 2 networks connect with tier 1 networks on a settlement free\nbasis",
+            "date_modified": "2012-12-31T16:53:59.789Z",
+            "question": 6,
+            "is_correct_answer": true,
+            "date_created": "2012-12-31T16:53:59.789Z"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "c. tier 1 networks all interconnect with each other",
+            "date_modified": "2012-12-31T16:54:04.593Z",
+            "question": 6,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:54:04.593Z"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "d. tier 1 networks have high speed optical cores",
+            "date_modified": "2012-12-31T16:54:08.644Z",
+            "question": 6,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:54:08.643Z"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "quizzes.question",
+        "fields": {
+            "text": "7. Which of the following networks are asymmetrical? Choose all that apply.",
+            "date_modified": "2012-12-31T16:52:25.508Z",
+            "date_created": "2012-12-31T16:52:25.507Z",
+            "quiz": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "a. wireline DSL networks",
+            "date_modified": "2012-12-31T16:53:52.674Z",
+            "question": 7,
+            "is_correct_answer": true,
+            "date_created": "2012-12-31T16:53:52.674Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "b. cable broadband networks",
+            "date_modified": "2012-12-31T16:53:59.789Z",
+            "question": 7,
+            "is_correct_answer": true,
+            "date_created": "2012-12-31T16:53:59.789Z"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "c. mobile radio networks",
+            "date_modified": "2012-12-31T16:54:04.593Z",
+            "question": 7,
+            "is_correct_answer": true,
+            "date_created": "2012-12-31T16:54:04.593Z"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "d. Ethernet networks",
+            "date_modified": "2012-12-31T16:54:08.644Z",
+            "question": 7,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:54:08.643Z"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "quizzes.question",
+        "fields": {
+            "text": "8. Where is the IP protocol guaranteed to be enforced?",
+            "date_modified": "2012-12-31T16:52:25.508Z",
+            "date_created": "2012-12-31T16:52:25.507Z",
+            "quiz": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "a. throughout the Internet",
+            "date_modified": "2012-12-31T16:53:52.674Z",
+            "question": 8,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:53:52.674Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "b. at the boundaries between networks",
+            "date_modified": "2012-12-31T16:53:59.789Z",
+            "question": 8,
+            "is_correct_answer": true,
+            "date_created": "2012-12-31T16:53:59.789Z"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "c. within tier 1 networks",
+            "date_modified": "2012-12-31T16:54:04.593Z",
+            "question": 8,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:54:04.593Z"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "d. within ISP networks",
+            "date_modified": "2012-12-31T16:54:08.644Z",
+            "question": 8,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:54:08.643Z"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "quizzes.question",
+        "fields": {
+            "text": "9. What distinguishes IP data received from a mobile network operator?",
+            "date_modified": "2012-12-31T16:52:25.508Z",
+            "date_created": "2012-12-31T16:52:25.507Z",
+            "quiz": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "a. the IP source address changes as users move between cell towers",
+            "date_modified": "2012-12-31T16:53:52.674Z",
+            "question": 9,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:53:52.674Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "b. nothing",
+            "date_modified": "2012-12-31T16:53:59.789Z",
+            "question": 9,
+            "is_correct_answer": true,
+            "date_created": "2012-12-31T16:53:59.789Z"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "c. when users roam into another network, the IP address changes",
+            "date_modified": "2012-12-31T16:54:04.593Z",
+            "question": 9,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:54:04.593Z"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "d. the mobility bit indicator in the IP packet",
+            "date_modified": "2012-12-31T16:54:08.644Z",
+            "question": 9,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:54:08.643Z"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "quizzes.question",
+        "fields": {
+            "text": "10. Which agency oversees the approval of an ISP or enterprise applying to\njoin the Internet?",
+            "date_modified": "2012-12-31T16:52:25.508Z",
+            "date_created": "2012-12-31T16:52:25.507Z",
+            "quiz": 1
+        }
+    },
+    {
+        "pk": 1,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "a. the Internet Architectural Board (IAB)",
+            "date_modified": "2012-12-31T16:53:52.674Z",
+            "question": 10,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:53:52.674Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "b. no one. They simply contract with an existing service provider.",
+            "date_modified": "2012-12-31T16:53:59.789Z",
+            "question": 10,
+            "is_correct_answer": true,
+            "date_created": "2012-12-31T16:53:59.789Z"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "c. the Federal Communications Commission licenses networks joining the\nInternet",
+            "date_modified": "2012-12-31T16:54:04.593Z",
+            "question": 10,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:54:04.593Z"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "quizzes.answer",
+        "fields": {
+            "text": "d. a consortium of Google, Yahoo and other content providers",
+            "date_modified": "2012-12-31T16:54:08.644Z",
+            "question": 10,
+            "is_correct_answer": false,
+            "date_created": "2012-12-31T16:54:08.643Z"
+        }
+    }
+]

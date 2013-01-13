@@ -6,7 +6,12 @@ $(document).ready(function() {
 			1: {sorter: 'text'},
 			2: {sorter: 'monthDayYear'}, 
 			}*/
-		}); 
+		});
+		$("#differences").tablesorter( {
+			sorter: false,
+			widgets: ['zebra'],
+		});
+		 
 		$("ul.thumbnails").ytplaylist({addThumbs:true, autoPlay: false, holderId: 'ytvideo1'});
 		
 

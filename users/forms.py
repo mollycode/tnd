@@ -15,7 +15,7 @@ class UserRegistrationForm(ModelForm):
 class UserProfileForm(ModelForm):
     class Meta:
         model = UserProfile
-        fields = ("first_name", "last_name", "age", "sex", "country", "education_level", "background_field", "desire")
+        fields = ("first_name", "last_name", "age", "sex", "country", "education_level", "background_field", "first_interest", "second_interest", "desire")
         widgets = {
             "age": TextInput(attrs={'size':'1','maxlength':'3'}),
             "desire": Textarea(attrs={'cols': 80, 'rows': 20}),
@@ -53,3 +53,4 @@ class UserEmailForm(ModelForm):
         if commit:
             user.save()
         return user
+        

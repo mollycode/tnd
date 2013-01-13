@@ -15,6 +15,7 @@ urlpatterns = patterns('courses.views',
     url(r'^ciofficourseinfo/$', 'cioffi'),
     url(r'^foxcourseinfo/$', 'fox'),
     url(r'^glasscourseinfo/$', 'glass'),
+    url(r'^footecourseinfo/$', 'foote'),
     
     url(r'^$', 'get_out'),
 )

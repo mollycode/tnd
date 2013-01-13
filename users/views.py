@@ -5,8 +5,10 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import render_to_response
 
 from users.forms import UserProfileForm, UserCreationForm, UserRegistrationForm, UserEmailForm
+from courses.forms import CourseRatingForm
 from users.models import get_or_create_user_profile, UserProfile
 
 from courses.models import Course
@@ -111,11 +113,30 @@ def currentlessons(request):
 
 @login_required
 def completedcourses(request):
+    
+    rating_form = CourseRatingForm()
+
     td = {}
     td["courses"] = []
     td["is_profile_page"] = True
+    td["rating_form"] = rating_form
+
+    if request.POST:
+        rating_form = CourseRatingForm(request.POST)
+        
+        if rating_form.is_valid():
+            rating_form.save()
+            return redirect("/")
     
     return render(request, "completedcourses.html", td)
+
+@login_required
+def recommended(request):
+    courses = Course.objects.all()
+
+    td = {}
+    td["courses"] = courses
+    return render(request, 'recommended.html', td)
 
 @login_required
 def addcourse(request, course_id):

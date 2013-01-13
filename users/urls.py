@@ -7,6 +7,7 @@ urlpatterns = patterns('users.views',
     url(r'^register/$', 'register'),
     url(r'^currentlessons/$', 'currentlessons'),
     url(r'^completedcourses/$', 'completedcourses'),
+    url(r'^recommended/$', 'recommended'),
     
     url(r'^addcourse/(?P<course_id>\d+)/$', 'addcourse'),
     url(r'^removecourse/(?P<course_id>\d+)/$', 'removecourse'),
